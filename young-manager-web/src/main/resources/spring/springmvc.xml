@@ -47,7 +47,6 @@
     <!--连接注册中心-->
     <dubbo:registry protocol="zookeeper" address="192.168.25.144:2181"/>
 
-
     <!--在注册中心需要询问的内容-->
     <dubbo:reference interface="cn.young.manager.service.UserService" id="userService" timeout="20000"/>
 </beans>

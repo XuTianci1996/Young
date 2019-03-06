@@ -3,6 +3,9 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/young-manager-web" />
+    <file type="web" url="file://$PROJECT_DIR$/young-manager/service" />
+    <file type="web" url="file://$PROJECT_DIR$/young-manager/web" />
+    <file type="web" url="file://$PROJECT_DIR$/young-portal-web" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -11,7 +14,6 @@
         <option value="$PROJECT_DIR$/young-parent/pom.xml" />
         <option value="$PROJECT_DIR$/young-common/pom.xml" />
         <option value="$PROJECT_DIR$/young-manager/pom.xml" />
-        <option value="$PROJECT_DIR$/young-manager-web/pom.xml" />
       </list>
     </option>
   </component>

@@ -10,13 +10,14 @@
         <module name="interface" />
         <module name="pojo" />
         <module name="service" />
+        <module name="web" />
         <module name="young-common" />
-        <module name="young-manager-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="service" target="1.7" />
       <module name="Young" target="1.5" />
+      <module name="young-manager-web" target="1.7" />
+      <module name="young-portal-web" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
