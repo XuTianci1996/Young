@@ -5,15 +5,15 @@ import java.io.Serializable;
 public class User implements Serializable {
     private Long uid;
 
-    private String userName;
+    private String uname;
 
     private String password;
 
     private String school;
 
-    private Long studentNumber;
+    private Long stuNumber;
 
-    private String studentName;
+    private String stuName;
 
     private String telephone;
 
@@ -21,7 +21,7 @@ public class User implements Serializable {
 
     private Integer sex;
 
-    private String uImage;
+    private String uimage;
 
     public Long getUid() {
         return uid;
@@ -31,12 +31,12 @@ public class User implements Serializable {
         this.uid = uid;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUname() {
+        return uname;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setUname(String uname) {
+        this.uname = uname == null ? null : uname.trim();
     }
 
     public String getPassword() {
@@ -55,20 +55,20 @@ public class User implements Serializable {
         this.school = school == null ? null : school.trim();
     }
 
-    public Long getStudentNumber() {
-        return studentNumber;
+    public Long getStuNumber() {
+        return stuNumber;
     }
 
-    public void setStudentNumber(Long studentNumber) {
-        this.studentNumber = studentNumber;
+    public void setStuNumber(Long stuNumber) {
+        this.stuNumber = stuNumber;
     }
 
-    public String getStudentName() {
-        return studentName;
+    public String getStuName() {
+        return stuName;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName == null ? null : studentName.trim();
+    public void setStuName(String stuName) {
+        this.stuName = stuName == null ? null : stuName.trim();
     }
 
     public String getTelephone() {
@@ -95,11 +95,11 @@ public class User implements Serializable {
         this.sex = sex;
     }
 
-    public String getuImage() {
-        return uImage;
+    public String getUimage() {
+        return uimage;
     }
 
-    public void setuImage(String uImage) {
-        this.uImage = uImage == null ? null : uImage.trim();
+    public void setUimage(String uimage) {
+        this.uimage = uimage == null ? null : uimage.trim();
     }
 }

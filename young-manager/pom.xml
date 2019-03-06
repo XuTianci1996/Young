@@ -21,6 +21,7 @@
         <module>dao</module>
         <module>interface</module>
         <module>service</module>
+        <module>web</module>
     </modules>
 
 

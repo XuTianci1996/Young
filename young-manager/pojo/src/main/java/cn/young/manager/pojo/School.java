@@ -5,11 +5,11 @@ import java.io.Serializable;
 public class School implements Serializable {
     private Long sid;
 
-    private String schoolName;
+    private String schName;
 
-    private String sImage;
+    private String schImage;
 
-    private String description;
+    private String schDes;
 
     public Long getSid() {
         return sid;
@@ -19,27 +19,27 @@ public class School implements Serializable {
         this.sid = sid;
     }
 
-    public String getSchoolName() {
-        return schoolName;
+    public String getSchName() {
+        return schName;
     }
 
-    public void setSchoolName(String schoolName) {
-        this.schoolName = schoolName == null ? null : schoolName.trim();
+    public void setSchName(String schName) {
+        this.schName = schName == null ? null : schName.trim();
     }
 
-    public String getsImage() {
-        return sImage;
+    public String getSchImage() {
+        return schImage;
     }
 
-    public void setsImage(String sImage) {
-        this.sImage = sImage == null ? null : sImage.trim();
+    public void setSchImage(String schImage) {
+        this.schImage = schImage == null ? null : schImage.trim();
     }
 
-    public String getDescription() {
-        return description;
+    public String getSchDes() {
+        return schDes;
     }
 
-    public void setDescription(String description) {
-        this.description = description == null ? null : description.trim();
+    public void setSchDes(String schDes) {
+        this.schDes = schDes == null ? null : schDes.trim();
     }
 }

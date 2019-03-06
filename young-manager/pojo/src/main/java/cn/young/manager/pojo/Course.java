@@ -5,29 +5,23 @@ import java.io.Serializable;
 public class Course implements Serializable {
     private Long cid;
 
+    private String schName;
+
     private String courseCode;
 
     private String courseName;
 
-    private String teacher;
+    private String courseInfo;
 
-    private Integer startWeek;
+    private Integer courseSelectnum;
 
-    private Integer endWeek;
+    private Integer courseTotalnum;
 
-    private String location;
+    private String courseRemark;
 
-    private String courseTime;
+    private String courseDes;
 
-    private Integer chooseNumber;
-
-    private Integer limit;
-
-    private Long sid;
-
-    private String cImage;
-
-    private String description;
+    private String courseImage;
 
     public Long getCid() {
         return cid;
@@ -35,6 +29,14 @@ public class Course implements Serializable {
 
     public void setCid(Long cid) {
         this.cid = cid;
+    }
+
+    public String getSchName() {
+        return schName;
+    }
+
+    public void setSchName(String schName) {
+        this.schName = schName == null ? null : schName.trim();
     }
 
     public String getCourseCode() {
@@ -53,83 +55,51 @@ public class Course implements Serializable {
         this.courseName = courseName == null ? null : courseName.trim();
     }
 
-    public String getTeacher() {
-        return teacher;
+    public String getCourseInfo() {
+        return courseInfo;
     }
 
-    public void setTeacher(String teacher) {
-        this.teacher = teacher == null ? null : teacher.trim();
+    public void setCourseInfo(String courseInfo) {
+        this.courseInfo = courseInfo == null ? null : courseInfo.trim();
     }
 
-    public Integer getStartWeek() {
-        return startWeek;
+    public Integer getCourseSelectnum() {
+        return courseSelectnum;
     }
 
-    public void setStartWeek(Integer startWeek) {
-        this.startWeek = startWeek;
+    public void setCourseSelectnum(Integer courseSelectnum) {
+        this.courseSelectnum = courseSelectnum;
     }
 
-    public Integer getEndWeek() {
-        return endWeek;
+    public Integer getCourseTotalnum() {
+        return courseTotalnum;
     }
 
-    public void setEndWeek(Integer endWeek) {
-        this.endWeek = endWeek;
+    public void setCourseTotalnum(Integer courseTotalnum) {
+        this.courseTotalnum = courseTotalnum;
     }
 
-    public String getLocation() {
-        return location;
+    public String getCourseRemark() {
+        return courseRemark;
     }
 
-    public void setLocation(String location) {
-        this.location = location == null ? null : location.trim();
+    public void setCourseRemark(String courseRemark) {
+        this.courseRemark = courseRemark == null ? null : courseRemark.trim();
     }
 
-    public String getCourseTime() {
-        return courseTime;
+    public String getCourseDes() {
+        return courseDes;
     }
 
-    public void setCourseTime(String courseTime) {
-        this.courseTime = courseTime == null ? null : courseTime.trim();
+    public void setCourseDes(String courseDes) {
+        this.courseDes = courseDes == null ? null : courseDes.trim();
     }
 
-    public Integer getChooseNumber() {
-        return chooseNumber;
+    public String getCourseImage() {
+        return courseImage;
     }
 
-    public void setChooseNumber(Integer chooseNumber) {
-        this.chooseNumber = chooseNumber;
-    }
-
-    public Integer getLimit() {
-        return limit;
-    }
-
-    public void setLimit(Integer limit) {
-        this.limit = limit;
-    }
-
-    public Long getSid() {
-        return sid;
-    }
-
-    public void setSid(Long sid) {
-        this.sid = sid;
-    }
-
-    public String getcImage() {
-        return cImage;
-    }
-
-    public void setcImage(String cImage) {
-        this.cImage = cImage == null ? null : cImage.trim();
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description == null ? null : description.trim();
+    public void setCourseImage(String courseImage) {
+        this.courseImage = courseImage == null ? null : courseImage.trim();
     }
 }
