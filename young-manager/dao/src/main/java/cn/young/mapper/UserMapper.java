@@ -27,4 +27,29 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+    /**
+     * 用户登录
+     *
+     * @return
+     */
+    User login(User user);
+
+    /**
+     * 用户注册
+     *
+     * @param user
+     * @return
+     */
+    int regist(User user);
+    /**
+     * 修改密码
+     * @return
+     */
+    int updateUserPwd(User user);
+    /**
+     * 检查旧密码
+     * @param oldPwd
+     * @return
+     */
+    User checkOldPwd(User user);
 }

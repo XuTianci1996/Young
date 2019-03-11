@@ -287,4 +287,27 @@
       uimage = #{uimage,jdbcType=VARCHAR}
     where uid = #{uid,jdbcType=BIGINT}
   </update>
+
+  <!-- 登录 -->
+  <select id="login" resultMap="BaseResultMap" parameterType="cn.young.manager.pojo.User">
+		select uid,uname,password,school,stu_number,stu_name,telephone,email,sex,uimage from user
+		where uname=#{uname} and password=#{password}
+	</select>
+  <!-- 注册 -->
+  <insert id="regist" parameterType="cn.young.manager.pojo.User">
+		insert into user(uname, password, telephone) values(#{uname},#{password},#{telephone})
+	</insert>
+
+  <!-- 检查旧密码 -->
+  <select id="checkOldPwd" resultMap="BaseResultMap" parameterType="cn.young.manager.pojo.User">
+		select * from user where password = #{password} and uid = #{uid}
+	</select>
+
+  <update id="updateUserPwd" parameterType="cn.young.manager.pojo.User">
+		UPDATE user
+		SET password = #{password}
+		WHERE
+			uid = #{uid}
+	</update>
+
 </mapper>

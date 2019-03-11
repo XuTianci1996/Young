@@ -3,14 +3,16 @@ package cn.young.manager.web.controller;
 
 import cn.young.common.pojo.EasyUIDataGrid;
 import cn.young.common.pojo.YoungResult;
+import cn.young.manager.pojo.Admin;
 import cn.young.manager.pojo.Course;
-import cn.young.manager.service.CourseSelectedService;
-import cn.young.manager.service.CourseService;
-import cn.young.manager.service.EvaluationService;
-import cn.young.manager.service.UserService;
+import cn.young.manager.service.*;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 
 /**
@@ -30,18 +32,43 @@ public class AdminController {
 
     @Autowired
     private CourseSelectedService courseSelectedService;
+
+    @Autowired
+    private AdminService adminService;
     /**
      * 管理员页面入口
      * @return
      */
-    @RequestMapping("/")
-    public String getIndex(){
-        return "index";
+    @RequestMapping("/adminlogin")
+    public String getAdminLogin(){
+        return "adminlogin";
+    }
+
+    @RequestMapping("/check/{username}/{password}")
+    @ResponseBody
+    public YoungResult check(HttpServletRequest request,HttpServletResponse response,@PathVariable String username,@PathVariable String password){
+        Admin admin = adminService.adminLogin(username, password);
+        if(username.equals(admin.getAname()) && password.equals(admin.getPassword())){
+            CookieUtils.setCookie(request,response,"token","token",600);
+            return YoungResult.ok();
+        }
+            return YoungResult.build(404,"错误");
+
+    }
+
+
+    @RequestMapping("/admin")
+    public String getAdmin(HttpServletRequest request, HttpServletResponse response){
+        String value = CookieUtils.getCookieValue(request,"token");
+        if(StringUtils.isNoneBlank(value)){
+            return "admin";
+        }
+        return "redirect:/adminlogin";
     }
 
 
     /**
-     * 管理员右面页面显示
+     * 管理员页面显示
      * @param page
      * @return
      */
@@ -76,7 +103,7 @@ public class AdminController {
     }
 
     /**
-     *使得在查询用户里面呈现分页过后的数据表格
+     *查询用户
      */
     @RequestMapping("/user/list")
     @ResponseBody
@@ -90,7 +117,6 @@ public class AdminController {
     @ResponseBody
     public YoungResult deleteUser(@RequestParam(value="ids")long uid){
         YoungResult youngResult = userService.deleteUser( uid);
-        System.out.println(youngResult.getStatus());
         return  youngResult;
     }
 
@@ -103,8 +129,10 @@ public class AdminController {
 
     @RequestMapping("/courseselected/list")
     @ResponseBody
-    public EasyUIDataGrid getcourseselectedList(Integer page, Integer rows){
+    public EasyUIDataGrid getCourseSelectedList(Integer page, Integer rows){
         EasyUIDataGrid result = courseSelectedService.getCourseSelectedList(page,rows);
         return result;
     }
+
+
 }

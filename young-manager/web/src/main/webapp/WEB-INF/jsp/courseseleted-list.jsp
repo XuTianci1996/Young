@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<table class="easyui-datagrid" id="coursesList" title="课程列表"
+<table  onload="getLocalTime()" class="easyui-datagrid" id="coursesList" title="课程列表"
        data-options="singleSelect:true,collapsible:true,pagination:true,url:'/courseselected/list',method:'get',pageSize:30,toolbar:toolbar">
     <thead>
     <tr>
@@ -27,9 +27,26 @@
         ids = ids.join(",");
         return ids;
     }
-
+    function getLocalTime(contentDate) {
+        alert("11111");
+        alert(contentDate);
+        contentDate=""+contentDate+"";//因为jsonDate是number型的indexOf会报错
+        if (contentDate.indexOf("+") > 0) {
+            contentDate = contentDate.substring(0, contentDate.indexOf("+"));
+        }
+        else if (contentDate.indexOf("-") > 0) {
+            contentDate = contentDate.substring(0, contentDate.indexOf("-"));
+        }
+        var date = new Date(parseInt(contentDate, 10));
+        var month = date.getMonth() + 1 < 10 ? "0" + (contentDate.getMonth() + 1) : contentDate.getMonth() + 1;
+        var currentDate = date.getDate() < 10 ? "0" + contentDate.getDate() : contentDate.getDate();
+        var hours = date.getHours() < 10 ? "0" + contentDate.getHours() : contentDate.getHours();
+        var minutes = date.getMinutes() < 10 ? "0" + contentDate.getMinutes() : contentDate.getMinutes();
+        var seconds = date.getSeconds() < 10 ? "0" + contentDate.getSeconds() : contentDate.getSeconds();
+        return date.getFullYear() + "-" + month + "-" + currentDate + " " + hours + ":" + minutes + ":" + seconds;
+    }
     var toolbar = [{
-        text:'课程列表',
+        text:'课程评价列表',
         iconCls:'icon'
     }];
 </script>

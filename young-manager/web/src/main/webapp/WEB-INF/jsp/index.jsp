@@ -1,92 +1,395 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>独墅湖高教区研究生课程信息共享平台后台管理系统</title>
-<link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.4.1/themes/gray/easyui.css" />
-<link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.4.1/themes/icon.css" />
-<link rel="stylesheet" type="text/css" href="css/e3.css" />
-<link rel="stylesheet" type="text/css" href="css/default.css" />
-<script type="text/javascript" src="js/jquery-easyui-1.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="js/jquery-easyui-1.4.1/locale/easyui-lang-zh_CN.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
-<style type="text/css">
-	.content {
-		padding: 10px 10px 10px 10px;
-	}
-</style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="layui/css/layui.css"/>
+    <title>独墅湖高教区课程资源共享平台</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/h-school.css">
+    <link rel="stylesheet" href="css/k-style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="layui/layui.js"></script>
 </head>
-<body class="easyui-layout">
-    <!-- 头部标题 -->
-	<div data-options="region:'north',border:false" style="height:60px; padding:5px; background:#F3F3F3"> 
-		<span class="northTitle">独墅湖高教区研究生课程信息共享平台后台管理系统</span>
-	    <span class="loginInfo">登录用户：admin&nbsp;&nbsp;姓名：管理员&nbsp;&nbsp;角色：系统管理员</span>
-	</div>
-    <div data-options="region:'west',title:'菜单',split:true" style="width:180px;">
-    	<ul id="menu" class="easyui-tree" style="margin-top: 10px;margin-left: 5px;">
+<body>
+<div class="layui-carousel" id="bg-item">
+    <div class="layui-header title">
+        <div class="layui-container">
+            <div class="layui-logo layui-pull-left">
+                <img src="img/frontpagelogo.png" width="360px">
+            </div>
 
-         	<li>
-         		<span>课程管理</span>
-         		<ul>
-	         		<li data-options="attributes:{'url':'course-list'}">查看课程</li>
-	         	</ul>
-         	</li>
-			<li>
-         		<span>用户管理</span>
-         		<ul>
-	         		<li data-options="attributes:{'url':'user-list'}">管理用户</li>
-	         	</ul>
-         	</li>
-			<li>
-				<span>评价管理</span>
-				<ul>
-					<li data-options="attributes:{'url':'evaluation-list'}">管理评价</li>
-				</ul>
-			</li>
-			<li>
-			<span>评价内容管理</span>
-			<ul>
-				<li data-options="attributes:{'url':'courseseleted-list'}">管理内容评价</li>
-			</ul>
-		</li>
-         </ul>
+            <c:if test="${not empty loginUser }">
+                <div class="personalCenter layui-pull-right"><a href="toUserSystem" target="_blank" style="color:#fff"><i class="layui-icon layui-icon-tree"></i> 个人中心</a></div>
+            </c:if>
+            <c:if test="${empty loginUser }">
+                <div class="operation layui-pull-right"><i class="layui-icon layui-icon-tree"></i> 学生登录</div>
+            </c:if>
+            <div class="personalCenter layui-pull-right"><a href="toUserSystem" target="_blank" style="color:#fff"><i class="layui-icon layui-icon-tree"></i>院校</a></div>
+        </div>
     </div>
-    <div data-options="region:'center',title:''">
-    	<div id="tabs" class="easyui-tabs">
-		    <div title="首页" style="padding:20px;">
-		        	
-		    </div>
-		</div>
+    <!--搜索框-->
+    <div class="layui-container">
+        <div class="seach-input">
+            <form class="seach-form layui-form" method="post" action="findHouseByLike">
+                <div class="layui-pull-left input">
+
+                    <input type="text" placeholder="课程名称." name="keywords" class="seach layui-input"  lay-verify="">
+                </div>
+                <div class="layui-pull-left button">
+                    <button class="btn seach-btn" lay-submit><i class="layui-icon layui-icon-search" style="font-size: 24px;"></i></button>
+                </div>
+            </form>
+        </div>
     </div>
-    <!-- 页脚信息 -->
-	<div data-options="region:'south',border:false" style="height:20px; background:#F3F3F3; padding:2px; vertical-align:middle;">
-		<span id="sysVersion">系统版本：V1.0</span>
-	    <span id="nowTime"></span>
-	</div>
-<script type="text/javascript">
-$(function(){
-	$('#menu').tree({
-		onClick: function(node){
-			if($('#menu').tree("isLeaf",node.target)){
-				var tabs = $("#tabs");
-				var tab = tabs.tabs("getTab",node.text);
-				if(tab){
-					tabs.tabs("select",node.text);
-				}else{
-					tabs.tabs('add',{
-					    title:node.text,
-					    href: node.attributes.url,
-					    closable:true,
-					    bodyCls:"content"
-					});
-				}
-			}
-		}
-	});
-});
-setInterval("document.getElementById('nowTime').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
-</script>
+    <div carousel-item>
+        <div style="background: url('img/dongnan4.jpg')no-repeat center/cover"></div>
+        <div style="background: url('img/dongnan1.jpg')no-repeat center/cover"></div>
+        <div style="background: url('img/dongnan5.jpg')no-repeat center/cover"></div>
+        <div style="background: url('img/nanda1.jpg')no-repeat center/cover"></div>
+    </div>
+</div>
+
+<div class="layui-container">
+    <div class="layui-tab layui-tab-brief" id="sign" lay-filter="" style="display: none;">
+        <ul class="layui-tab-title">
+            <li class="layui-this">登录</li>
+            <li>注册</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <div class="" style="margin: 40px 20px;">
+                    <form class="layui-form layui-form-pane" id="login">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户名</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">密码</label>
+                            <div class="layui-input-block">
+                                <input type="password" name="password" required  lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="layui-form-item">
+                            <button class="layui-btn layui-btn-fluid layui-btn-normal layui-btn-radius" lay-submit lay-filter="login">立即登录</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="layui-tab-item">
+                <div class="" style="margin: 30px 20px;">
+                    <form class="layui-form layui-form-pane form">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户名</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="uname" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">密码</label>
+                            <div class="layui-input-block">
+                                <input type="password" name="password" required  id="registPassword" lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">确认密码</label>
+                            <div class="layui-input-block">
+                                <input type="password" name="password" required  id="confirmPassword" lay-verify="required" placeholder="请再次输入密码" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">手机号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="telephone" required  lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <%--                        <div class="layui-form-item">
+                                                    <label class="layui-form-label">昵称</label>
+                                                    <div class="layui-input-block">
+                                                        <input type="text" name="uNickName" required  lay-verify="required" placeholder="注册后不能修改" autocomplete="off" class="layui-input">
+                                                    </div>
+                                                </div>--%>
+                    </form>
+                    <div class="layui-form-item">
+                        <input type="submit" id="registSubmit" class="layui-btn layui-btn-fluid layui-btn-radius layui-btn-normal regist-btn" value="立即注册" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="course wCenter">
+
+    <div class="img"  style="width: 100%;text-align: center;"></div>
+    <div class="img"  style="width: 100%;text-align: center;"><img src="../img/hot-course.png" alt=""></div>
+
+    <div class="detail">
+
+        <ul>
+            <c:forEach items="${HotCourse}" var="h">
+            <li><a href="javascript:if(confirm('http://zjedu.moocollege.com/course/detail/30008288  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://zjedu.moocollege.com/course/detail/30008288'">
+                <div class="img">
+                    <img src="${h.courseImage}" alt="">
+
+                </div>
+                <div class="status">
+                    <p><span>${h.courseName}</span><span class="icon"></span></p>
+                    <p><span class="planing">正在开课</span><span><img src="" alt="">${h.courseSelectnum}</span></p>
+                </div>
+                <div class="person">
+                    <span><img src=""alt=""></span>
+                    <span>${h.schName}</span>
+                </div>
+            </a>
+            </li>
+            </c:forEach>
+
+
+        </ul>
+
+    </div>
+
+</div>
+<div class="course wCenter">
+    <div class="img"  style="width: 100%;text-align: center;"><img src="../img/tj-course.png" alt=""></div>
+    <div class="detail">
+        <ul>
+            <li>
+                <a href="/course/detail/30008333">
+                    <div class="img">
+                        <img src="img/3.jpg" alt="">
+                    </div>
+                    <div class="status">
+                        <p><span>马克思主义基本原理概论</span><span class="icon"><i class="dimc2">省级精品</i></span></p>
+                        <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">2732</span></p>
+                    </div>
+                    <div class="person">
+                        <span><img src="/static/image/head.png" alt="">王来法</span>
+                        <span>浙江工商大学</span>
+                    </div>
+                </a>
+            </li>
+            <li><a href="/course/detail/30008288">
+                <div class="img">
+                    <img src="img/9.jpg" alt="">
+                </div>
+                <div class="status">
+                    <p><span>思想道德修养与法律基础</span><span class="icon"><i class="dimc3">立项课程</i></span></p>
+                    <p><span class="planing">正在开课</span><span><img src="/static/image/people@2x.png" alt="">2983</span></p>
+                </div>
+                <div class="person">
+                    <span><img src="http://image.moocollege.com/v2_customer/0uGjprijZ-DxLzpgB2BveyJKzvaf7Iuc3viE3XUwoNwMw5ItXcfcpE1diyBL8rik_1504748014916@!small" alt="">翁攀峰</span>
+                    <span>温州医科大学</span>
+                </div>
+            </a>
+            </li>
+            <li>
+                <a href="/course/detail/30007327">
+                    <div class="img">
+                        <img src="img/1.png" alt="">
+                    </div>
+                    <div class="status">
+                        <p><span>电路分析基础（2019春学期）</span><span class="icon"><i class="dimc1">国家精品</i></span></p>
+                        <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">2368</span></p>
+                    </div>
+                    <div class="person">
+                        <span><img src="/static/image/head.png" alt="">卢飒</span>
+                        <span>中国计量大学现代科技学院</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/course/detail/30007776">
+                    <div class="img">
+                        <img src="img/4.jpg" alt="">
+                    </div>
+                    <div class="status">
+                        <p><span>病理生理学(2018-2019学年下)</span><span class="icon"><i class="dimc3">立项课程</i></span></p>
+                        <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">1959</span></p>
+                    </div>
+                    <div class="person">
+                        <span><img src="http://image.moocollege.com/v2_customer/4idB3NBDFu0jSZW1G5AppEp4IAwUbPHfAnKBy6ylGTjCa29QaeZSckLPn4NWawlV_1502179242430@!small" alt="">许益笑</span>
+                        <span>温州医科大学仁济学院</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/course/detail/30007397">
+                    <div class="img">
+                        <img src="img/7.jpg" alt="">
+                    </div>
+                    <div class="status">
+                        <p><span>经济数学</span><span class="icon"><i class="dimc2">省级精品</i></span></p>
+                        <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">1058</span></p>
+                    </div>
+                    <div class="person">
+                        <span><img src="/static/image/head.png" alt="">陈笑缘</span>
+                        <span>浙江商业职业技术学院</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/course/detail/30007600">
+                    <div class="img">
+                        <img src="img/7.jpg" alt="">
+                    </div>
+                    <div class="status">
+                        <p><span>应用高等数学</span><span class="icon"><i class="dimc3">立项课程</i></span></p>
+                        <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">1435</span></p>
+                    </div>
+                    <div class="person">
+                        <span><img src="/static/image/head.png" alt="">胡桐春</span>
+                        <span>杭州科技职业技术学院</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/course/detail/30008058">
+                    <div class="img">
+                        <img src="img/8.jpg" alt="">
+                    </div>
+                    <div class="status">
+                        <p><span>江南古镇与水乡文化</span><span class="icon"><i class="dimc3">立项课程</i></span></p>
+                        <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">1248</span></p>
+                    </div>
+                    <div class="person">
+                        <span><img src="http://image.moocollege.com/v2_customer/XK9HStabaw5VpkGP9zxJaNyNHPwbzYKuWyspuiCb4M0J1ZEc6EQ0qtra9b845Y2m_1502432178802@!small" alt="">陈勰</span>
+                        <span>温州医科大学仁济学院</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/course/detail/30007330">
+                    <div class="img">
+                        <img src="img/14.jpg" alt="">
+                    </div>
+                    <div class="status">
+                        <p><span>大学生创业导航</span><span class="icon"><i class="dimc3">立项课程</i></span></p>
+                        <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">8140</span></p>
+                    </div>
+                    <div class="person">
+                        <span><img src="/static/image/head.png" alt="">吴芳珍</span>
+                        <span>金华职业技术学院</span>
+                    </div>
+                </a>
+            </li>
+
+
+        </ul>
+    </div>
+</div>
+
+<div class="parterner wCenter">
+
+
+<div class="parterner wCenter">
+    <div class="title" >
+        <span><i class="school-parter" style="color: #0E7DFF" ></i></span>
+    </div>
+    <div class="detail">
+        <div class="items">
+            <div class="left">合作院校</div>
+            <div class="item"><a href="/Province/Index/schooldetail?orgId=39"><img src="img/dnxiaohui.png" alt=""></a></div>
+            <div class="item"><a href="/Province/Index/schooldetail?orgId=40"><img src="img/zkdxiaohui.png" alt=""></a></div>
+            <div class="item"><a href="/Province/Index/schooldetail?orgId=39"><img src="img/kongbai.png" alt=""></a></div>
+            <div class="item"><a href="/Province/Index/schooldetail?orgId=40"><img src="img/kongbai.png" alt=""></a></div>
+            <div class="item"><a href="/Province/Index/schooldetail?orgId=39"><img src="img/kongbai.png" alt=""></a></div>
+            <div class="item"><a href="/Province/Index/schooldetail?orgId=40"><img src="img/kongbai.png" alt=""></a></div>
+</div>
+
+
+<div class="footer">
+    <div class="wCenter">
+        <div class="left">
+            <h5 class="black_color"><img src="../static/image/logo_small2@2x.png" alt="">独墅湖高教区课程资源共享平台</h5>
+            <p>课程内容版权均归课程内容提供者(机构)所有</p>
+        </div>
+        <div class="center">
+            <dl>
+                <dt><a class="black_color" href="Index/notice.htm">-平台介绍</a></dt>
+                <dt><a class="black_color" href="Index/help.htm">-帮助中心</a></dt>
+                <dt><a class="black_color" href="Index/concat.htm">-联系我们</a></dt>
+                <!-- <dt><a class="black_color" href="http://">-关注我们</a></dt> -->
+            </dl>
+        </div>
+        <div class="right">
+            <p class="black_color">主管单位：东南苏州研究院</p>
+            <p class="black_color">主办单位：独墅湖高教区课程资源共享平台管理中心</p>
+            <p class="black_color">承办单位：Young项目组</p>
+        </div>
+    </div>
+</div>
+
+        <script>
+            layui.use(['element', 'carousel','layer','form'], function () {
+                var element = layui.element,
+                    carousel = layui.carousel,
+                    $ = layui.jquery,
+                    layer = layui.layer,
+                    form = layui.form;
+
+                var layer_index;
+                carousel.render({
+                    elem:"#bg-item",
+                    width:"100%",
+                    height:"600px",
+                    anim:"fade"
+                });
+                $('.operation').click(function () {
+                    layer_index = layer.open({
+                        type:1,
+                        content:$('#sign'),
+                        area:['360px','460px'],
+                        title:"登录注册",
+                        closeBtn:2
+                    });
+                });
+                $('.list-item li').click(function () {
+                    $('.list-item li').removeClass('click-this');
+                    $(this).addClass('click-this');
+                });
+
+                $('#registSubmit').click(function () {
+                    if($("input[name='uname']").val()!=""&&$("input[id='registPassword']").val()!=""&&$("input[name='telephone']").val()!=""&&$("input[id='confirmPassword']").val()!=""){
+                        if($("input[id='registPassword']").val()!=$("input[id='confirmPassword']").val()){
+                            layer.msg("两次输入的密码不一致！");
+                            $("input[id='registPassword']").val()=="";
+                            $("input[id='confirmPassword']").val()=="";
+
+                        }else{
+                            $.post("regist",$('.form').serialize(),function (res) {
+                                console.log(res)
+                                if(res=='OK'){
+                                    layer.close(layer_index);
+                                    layer.alert("注册成功",{icon:1,time:2000});
+                                    $('.form')[0].reset();
+                                }else{
+                                    layer.msg("注册失败,用户名已存在");
+                                }
+                            })
+                        }
+                    }else{
+                        layer.msg("请填写所有表单");
+                    }
+                });
+
+                form.on("submit(login)",function(){
+                    $.post("login",$('#login').serialize(),function (res) {
+                        if(res=="OK"){
+                            window.location.href="toIndexPage";
+                        }else{
+                            layer.msg("用户名或者密码错误");
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
 </body>
 </html>

@@ -25,7 +25,9 @@ public class CourseSelectedServiceImpl implements CourseSelectedService {
         //执行查询
         CourseSelectedExample courseExample = new CourseSelectedExample();
         List<CourseSelected> courseList = courseSelectedMapper.selectByExampleWithBLOBs(courseExample);
-        System.out.println(courseList.get(0).getCid() +","+ courseList.get(0).getContent());
+        for (CourseSelected selected: courseList) {
+            String contentDate= selected.getContentDate().toString();
+        }
         PageInfo<CourseSelected> pageInfo = new PageInfo(courseList);
         //创建一个返回值对象
         EasyUIDataGrid result = new EasyUIDataGrid();

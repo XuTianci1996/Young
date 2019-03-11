@@ -45,7 +45,6 @@ public class CourseImpl implements CourseService {
         courseExample.setOrderByClause("course_selectnum");
         List<Course> courseList = courseMapper.selectByExample(courseExample);
         PageInfo<Course> pageInfo = new PageInfo(courseList);
-        System.out.println();
         //创建一个返回值对象
         EasyUIDataGrid result = new EasyUIDataGrid();
         result.setRows(courseList);

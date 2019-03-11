@@ -10,6 +10,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -19,6 +20,30 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Override
+    public User login(User user) {
+        String password = DigestUtils.md5DigestAsHex(user.getPassword().getBytes());
+        user.setPassword(password);
+        return userMapper.login(user);
+    }
+
+    @Override
+    public int regist(User user) {
+        String password = DigestUtils.md5DigestAsHex(user.getPassword().getBytes());
+        user.setPassword(password);
+        return userMapper.regist(user);
+    }
+
+    @Override
+    public int updateUserPwd(User user) {
+        return userMapper.updateUserPwd(user);
+    }
+
+    @Override
+    public User checkOldPwd(User user) {
+        return userMapper.checkOldPwd(user);
+    }
 
     @Override
     public User getUserById(long uid) {

@@ -32,6 +32,17 @@
   </filter-mapping>
 
 
+  <!--&lt;!&ndash; 使用filter实现登录控制 &ndash;&gt;-->
+  <!--<filter>-->
+    <!--<filter-name>SessionFilter</filter-name>-->
+    <!--<filter-class>cn.young.manager.web.filter.LoginFilter</filter-class>-->
+  <!--</filter>-->
+  <!--<filter-mapping>-->
+    <!--<filter-name>SessionFilter</filter-name>-->
+    <!--<url-pattern>/admin</url-pattern>-->
+  <!--</filter-mapping>-->
+
+
   <!-- springmvc的前端控制器 -->
   <servlet>
     <servlet-name>e3-manager</servlet-name>
