@@ -364,7 +364,7 @@
 
                         }else{
                             $.post("regist",$('.form').serialize(),function (res) {
-                                console.log(res)
+                                console.log(res);
                                 if(res=='OK'){
                                     layer.close(layer_index);
                                     layer.alert("注册成功",{icon:1,time:2000});

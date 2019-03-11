@@ -16,7 +16,6 @@ public class HotCourseController {
     @RequestMapping("/toIndexPage")
     public String toIndexPage(HttpServletRequest request) {
         List<HotCourse> findHotCourse = service.findAllHotCourse();
-        System.out.println(findHotCourse.get(1).getCourseName());
         request.getSession().setAttribute("HotCourse",findHotCourse );
         return "index";
     }

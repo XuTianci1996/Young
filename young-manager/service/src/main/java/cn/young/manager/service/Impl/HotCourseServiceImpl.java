@@ -17,10 +17,6 @@ public class HotCourseServiceImpl implements HotCourseService {
 
 	@Override
 	public List<HotCourse> findAllHotCourse() {
-
-		System.out.println("=====dao======"+dao);
-		System.out.println("=====findall======"+dao.findAllHotCourse());
-
 		return dao.findAllHotCourse();
 	}
 }

@@ -23,7 +23,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User login(User user) {
+        System.out.println("login:"+user.getPassword());
         String password = DigestUtils.md5DigestAsHex(user.getPassword().getBytes());
+        System.out.println(password);
         user.setPassword(password);
         return userMapper.login(user);
     }
