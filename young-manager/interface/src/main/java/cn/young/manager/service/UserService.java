@@ -37,4 +37,11 @@ public interface UserService {
 
     //删除用户
     YoungResult deleteUser(long uid);
+
+    /**
+     * 通过uid获取用户名和用户头像
+     * @param uid
+     * @return
+     */
+    User getUnameAndUimage(int uid);
 }

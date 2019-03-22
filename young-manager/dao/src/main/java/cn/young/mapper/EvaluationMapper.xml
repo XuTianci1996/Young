@@ -193,4 +193,9 @@
       total = #{total,jdbcType=INTEGER}
     where eid = #{eid,jdbcType=BIGINT}
   </update>
+
+  <!--根据课程编号，获取课程信息-->
+  <select id="getEvaluationByCourse_code" resultType="cn.young.manager.pojo.Evaluation" parameterType="java.lang.String">
+    select * from evaluation where course_code = #{course_code}
+  </select>
 </mapper>

@@ -294,10 +294,11 @@
 		where uname=#{uname} and password=#{password}
 	</select>
   <!-- 注册 -->
-  <insert id="regist" parameterType="cn.young.manager.pojo.User">
-		insert into user(uname, password, telephone) values(#{uname},#{password},#{telephone})
+    <!--注册要添加的字段修改了！！-->
+    <!-- 注册 -->
+    <insert id="regist" parameterType="cn.young.manager.pojo.User">
+		insert into user(uname, password, telephone, uimage) values(#{uname},#{password},#{telephone},#{uimage})
 	</insert>
-
   <!-- 检查旧密码 -->
   <select id="checkOldPwd" resultMap="BaseResultMap" parameterType="cn.young.manager.pojo.User">
 		select * from user where password = #{password} and uid = #{uid}
@@ -310,4 +311,7 @@
 			uid = #{uid}
 	</update>
 
+    <select id="getUnameAndUimage" resultType="cn.young.manager.pojo.User">
+    select uname, uimage from user where uid = #{uid}
+  </select>
 </mapper>

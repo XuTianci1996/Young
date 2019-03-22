@@ -93,11 +93,7 @@ ol, ul {
   padding-right: 0;
 }
 
-@font-face {
-  font-family: "iconfont";
-  src: url("../font/iconfont.eot"/*tpa=http://zjedu.moocollege.com/static/font/iconfont.eot*/);
-  src: url("../font/iconfont.eot-#iefix"/*tpa=http://zjedu.moocollege.com/static/font/iconfont.eot?#iefix*/) format("embedded-opentype"), url("../font/iconfont.woff"/*tpa=http://zjedu.moocollege.com/static/font/iconfont.woff*/) format("woff"), url("../font/iconfont.ttf"/*tpa=http://zjedu.moocollege.com/static/font/iconfont.ttf*/) format("truetype"), url("../font/iconfont.svg#iconfont"/*tpa=http://zjedu.moocollege.com/static/font/iconfont.svg#iconfont*/) format("svg");
-}
+
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
@@ -116,11 +112,7 @@ select:-webkit-autofill {
 }
 
 /* 基础变量 */
-@font-face {
-  font-family: "iconfont";
-  src: url("../iconfont/iconfont.eot"/*tpa=http://zjedu.moocollege.com/static/iconfont/iconfont.eot*/);
-  src: url("../iconfont/iconfont.eot-#iefix"/*tpa=http://zjedu.moocollege.com/static/iconfont/iconfont.eot?#iefix*/) format("embedded-opentype"), url("../iconfont/iconfont.woff"/*tpa=http://zjedu.moocollege.com/static/iconfont/iconfont.woff*/) format("woff"), url("../iconfont/iconfont.ttf"/*tpa=http://zjedu.moocollege.com/static/iconfont/iconfont.ttf*/) format("truetype"), url("../iconfont/iconfont.svg#iconfont"/*tpa=http://zjedu.moocollege.com/static/iconfont/iconfont.svg#iconfont*/) format("svg");
-}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -151,7 +143,7 @@ a:hover, a:active, a:visited, a:link {
   width: 100%;
   min-height: 310px;
   max-height: 450px;
-  background-image: url("../image/Group 4.png"/*tpa=http://zjedu.moocollege.com/static/image/Group 4.png*/);
+  background-image: url("../img/Group 4.png");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -949,17 +941,17 @@ html, body {
   background-position: center center;
 }
 .cloud-wind .left .item:nth-child(1) {
-  background-image: url("../image/gx.png"/*tpa=http://zjedu.moocollege.com/static/image/gx.png*/);
+  background-image: url("../img/gx.png");
 }
 .cloud-wind .left .item:nth-child(2) {
-  background-image: url("../image/jp.png"/*tpa=http://zjedu.moocollege.com/static/image/jp.png*/);
+  background-image: url("../img/jp.png");
 }
 .cloud-wind .left .item:nth-child(3) {
-  background-image: url("../image/lx.png"/*tpa=http://zjedu.moocollege.com/static/image/lx.png*/);
+  background-image: url("../img/lx.png");
   margin-bottom: 10px;
 }
 .cloud-wind .left .item:nth-child(4) {
-  background-image: url("../image/pt.png"/*tpa=http://zjedu.moocollege.com/static/image/pt.png*/);
+  background-image: url("../img/pt.png");
   margin-bottom: 0;
 }
 .cloud-wind .left .item p {
@@ -1551,7 +1543,7 @@ html, body {
 .s-school {
   width: 100%;
   overflow: hidden;
-  background: url("../image/s-bgc.png"/*tpa=http://zjedu.moocollege.com/static/image/s-bgc.png*/);
+  background: url("../img/s-bgc.png");
   background-size: cover;
   background-position: center center;
   margin-top: -18px;
@@ -1651,7 +1643,7 @@ html, body {
   width: 100%;
   margin-top: 0px;
   overflow: hidden;
-  background: url("../image/s-bgc.png"/*tpa=http://zjedu.moocollege.com/static/image/s-bgc.png*/);
+  background: url("../img/s-bgc.png");
   background-size: cover;
   background-position: center center;
 }
@@ -2638,7 +2630,7 @@ html, body {
 .o-other .o-banner {
   width: 100%;
   height: 210px;
-  background: url("../image/concat.jpg"/*tpa=http://zjedu.moocollege.com/static/image/concat.jpg*/);
+  background: url("../img/concat.jpg");
 }
 .o-other .o-title {
   height: 136px;
@@ -3010,7 +3002,7 @@ html, body {
   width: 100%;
   height: 640px;
   background-color: #fff;
-  background-image: url("../image/bgc.jpg"/*tpa=http://zjedu.moocollege.com/static/image/bgc.jpg*/);
+  background-image: url("../img/bgc.jpg");
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -4083,20 +4075,20 @@ html, body {
   }
   .compatible-small .cloud-wind .left .item:nth-child(1) {
     width: 20%;
-    background-image: url("../image/gx.png"/*tpa=http://zjedu.moocollege.com/static/image/gx.png*/);
+    background-image: url("../img/gx.png");
   }
   .compatible-small .cloud-wind .left .item:nth-child(2) {
     width: 24%;
-    background-image: url("../image/jp.png"/*tpa=http://zjedu.moocollege.com/static/image/jp.png*/);
+    background-image: url("../img/jp.png");
   }
   .compatible-small .cloud-wind .left .item:nth-child(3) {
     width: 24%;
-    background-image: url("../image/lx.png"/*tpa=http://zjedu.moocollege.com/static/image/lx.png*/);
+    background-image: url("../img/lx.png");
     margin-bottom: 10px;
   }
   .compatible-small .cloud-wind .left .item:nth-child(4) {
     width: 24%;
-    background-image: url("../image/pt.png"/*tpa=http://zjedu.moocollege.com/static/image/pt.png*/);
+    background-image: url("../img/pt.png");
     margin-bottom: 0;
   }
   .compatible-small .cloud-wind .left .item p {
@@ -4420,7 +4412,7 @@ html, body {
     display: none !important;
     width: 220px;
     height: 246px;
-    background-image: url("../image/teacher_bg@2x.png"/*tpa=http://zjedu.moocollege.com/static/image/teacher_bg@2x.png*/);
+    background-image: url("../img/gx.png");
     background-size: cover;
     background-position: top center;
     margin-left: -15px;
@@ -5137,12 +5129,12 @@ html, body {
   .s-school {
     width: 100%;
     overflow: hidden;
-    background: url("../image/s-bgc.png"/*tpa=http://zjedu.moocollege.com/static/image/s-bgc.png*/);
+    background: url("../img/s-bgc.png");
     background-size: cover;
     background-position: center center;
     margin-top: -0.72rem;
   }
-  .s-school .title {
+  .s-school .s-title {
     width: 4rem;
     height: 2.08rem;
     display: flex;
@@ -5150,7 +5142,7 @@ html, body {
     margin: 2.6rem auto 0.6rem;
     position: relative;
   }
-  .s-school .title::after {
+  .s-school .s-title::after {
     content: "";
     height: 0.12rem;
     width: 1.2rem;
@@ -5160,13 +5152,13 @@ html, body {
     margin-left: -0.72rem;
     background-color: #57A5FF;
   }
-  .s-school .title span {
+  .s-school .s-title span {
     display: inline-block;
     padding-top: 0.2rem;
     font-size: 0.8rem;
     letter-spacing: 0.08rem;
   }
-  .s-school .title img {
+  .s-school .s-title img {
     width: 1.6rem;
     height: 1.4rem;
     margin-right: 0.32rem;
@@ -5281,7 +5273,7 @@ html, body {
     width: 100%;
     margin-top: 0px;
     overflow: hidden;
-    background: url("../image/s-bgc.png"/*tpa=http://zjedu.moocollege.com/static/image/s-bgc.png*/);
+    background: url("../img/s-bgc.png");
     background-size: cover;
     background-position: center center;
   }
@@ -5561,7 +5553,7 @@ html, body {
   .o-other .o-banner {
     width: 100%;
     height: 210px;
-    background: url("../image/concat.jpg"/*tpa=http://zjedu.moocollege.com/static/image/concat.jpg*/);
+    background: url("../img/concat.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

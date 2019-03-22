@@ -30,7 +30,7 @@
     }
 
     var toolbar = [{
-        text:'删除',
+        text:'',
         iconCls:'icon-cancel',
         handler:function(){
             var ids = getSelectionsIds();

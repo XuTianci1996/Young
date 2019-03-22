@@ -4,6 +4,7 @@ import cn.young.manager.pojo.HotCourse;
 import cn.young.manager.service.HotCourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,24 @@ public class HotCourseController {
         List<HotCourse> findHotCourse = service.findAllHotCourse();
         request.getSession().setAttribute("HotCourse",findHotCourse );
         return "index";
+    }
+
+    @RequestMapping("/")
+    public String toIndex(HttpServletRequest request) {
+        List<HotCourse> findHotCourse = service.findAllHotCourse();
+        request.getSession().setAttribute("HotCourse",findHotCourse );
+        return "index";
+    }
+    /**
+     * 对应页面的跳转
+     * @param page
+     * @return
+     */
+    @RequestMapping("{page}")
+    public String getPage(@PathVariable String page, HttpServletRequest request){
+        List<HotCourse> findHotCourse = service.findAllHotCourse();
+        request.getSession().setAttribute("HotCourse",findHotCourse );
+        return page;
     }
 //    @RequestMapping("/toDetailsPage")
 //    public String toDetailsPage(int id,HttpServletRequest request) {

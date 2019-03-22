@@ -231,4 +231,5 @@
       sch_image = #{schImage,jdbcType=VARCHAR}
     where sid = #{sid,jdbcType=BIGINT}
   </update>
+
 </mapper>

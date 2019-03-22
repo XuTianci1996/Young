@@ -5,6 +5,7 @@ import cn.young.common.pojo.EasyUIDataGrid;
 import cn.young.common.pojo.YoungResult;
 import cn.young.manager.pojo.Admin;
 import cn.young.manager.pojo.Course;
+import cn.young.manager.pojo.HotCourse;
 import cn.young.manager.service.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 
 /**
@@ -39,7 +41,7 @@ public class AdminController {
      * 管理员页面入口
      * @return
      */
-    @RequestMapping("/adminlogin")
+    @RequestMapping("/ROOT/young/adminlogin")
     public String getAdminLogin(){
         return "adminlogin";
     }
@@ -52,7 +54,7 @@ public class AdminController {
             CookieUtils.setCookie(request,response,"token","token",600);
             return YoungResult.ok();
         }
-            return YoungResult.build(404,"错误");
+        return YoungResult.build(404,"错误");
 
     }
 
@@ -67,15 +69,7 @@ public class AdminController {
     }
 
 
-    /**
-     * 管理员页面显示
-     * @param page
-     * @return
-     */
-    @RequestMapping("{page}")
-    public String getPage(@PathVariable String page){
-        return page;
-    }
+
 
     /**
      * 根据id选择课程
@@ -98,7 +92,7 @@ public class AdminController {
     @RequestMapping("/course/list")
     @ResponseBody
     public EasyUIDataGrid getAllCourse(int page,int rows){
-        EasyUIDataGrid result = courseService.getUserList(page, rows);
+        EasyUIDataGrid result = courseService.getCourseList(page, rows);
         return result;
     }
 
@@ -134,5 +128,11 @@ public class AdminController {
         return result;
     }
 
+    @RequestMapping("/clearEvaluation/{uid}/{cid}")
+    @ResponseBody
+    public YoungResult clearEvaluation(@PathVariable long uid,@PathVariable long cid){
+        courseSelectedService.clearEvaluation(uid,cid);
+        return YoungResult.ok();
+    }
 
 }

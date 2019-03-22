@@ -241,4 +241,50 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
+
+  <update id="clearEvaluation" parameterType="map">
+    update course_selected
+    set
+      mark = null ,
+      content = null,
+      content_date = null
+    where cid = #{cid} and uid = #{uid}
+  </update>
+
+  <!--id是接口中的方法名，结果类型如没有在mybatis.xml文件中配置别名，则resultType必须使用全名称（包名+类名） -->
+  <!--带走/取出什么-->
+  <!-- 章海翔 -->
+  <select id="getAllRemarkByCourse_code" resultType="cn.young.manager.pojo.CourseSelected">
+    select
+      uid, mark, content, content_date
+    from course_selected
+    where course_code = #{course_code}
+  </select>
+
+  <!--曾经是否选过。选过的话修改那一行的ischoose，会返回1。否则还得插入-->
+  <update id="updateCourseSelectedToChoose">
+    update course_selected
+    SET ischoose = 1
+    WHERE cid = #{cid} and uid = #{uid}
+  </update>
+
+  <!--插入新的选课行！！但是插之前，注意另一表course的人数限制！！！-->
+  <insert id="insertCourseSelected">
+    insert into course_selected (cid, uid, course_code, ischoose)
+    VALUES (#{cid}, #{uid}, #{course_code}, 1 )
+  </insert>
+
+  <!--根据课程和用户，更新ischoose为0-->
+  <update id="updateCourseSelectedToQuit">
+    update course_selected
+    SET ischoose = 0
+    WHERE cid = #{cid} and uid = #{uid}
+  </update>
+
+  <!--用户是否已选课-->
+  <select id="hasChoosed" resultType="Integer">
+    select IFNULL(ischoose,0)
+    from course_selected
+    where cid = #{cid} and uid = #{uid}
+  </select>
 </mapper>

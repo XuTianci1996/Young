@@ -1,0 +1,59 @@
+@charset "utf-8";
+.comment_list {
+	float:left;
+	padding-top:20px;
+	width:700px;
+	margin:0 auto;
+}
+.comment {
+	padding-top:10px;
+	padding-left: 10px;
+	padding-bottom: 15px;
+}
+
+.comment_details {
+	float:left;
+}
+.comment_content {
+	margin-top:5px;
+	font-size:16px;
+}
+.comment_add_or_last {
+	
+	margin:0 auto;
+	clear: both;
+	width:600px;
+	height:40px;
+	background: #F0F0F0;
+	text-align: center;
+	line-height: 40px;   //行高（与div保持同高，垂直居中写法）
+}
+.imgdiv {
+	float:left;
+}
+.imgcss {
+	margin-top: 10px;
+	width:70px;
+	height:70px;
+	float:left;
+	border-radius: 10%;
+}
+.comment_name { 
+	margin-left:10px;
+	color:#3D9EEA;
+	font-size:15px;
+	font-weight: bolder;
+}
+.layui-icon {
+	font-size: 10px; 
+	color: grey;
+}
+.del {
+	margin-left: 55px;
+}
+.starrate {
+	padding-bottom: 5px;
+}
+.paging {
+
+}

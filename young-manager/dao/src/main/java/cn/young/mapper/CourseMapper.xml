@@ -90,10 +90,6 @@
     </if>
   </select>
 
-  <!--<select id="selectByExampledesc" parameterType="cn.young.manager.pojo.CourseExample" resultMap="BaseResultMap">-->
-    <!--select * from course order by course_selectnum desc;-->
-  <!--</select>-->
-
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -293,4 +289,42 @@
       course_image = #{courseImage,jdbcType=VARCHAR}
     where cid = #{cid,jdbcType=BIGINT}
   </update>
+  <select id="findCourseByLike" parameterType="string" resultMap="BaseResultMap">
+		SELECT
+		    *
+		FROM
+			course
+		WHERE
+			course_name LIKE CONCAT(CONCAT('%',#{keywords},'%'))
+	</select>
+
+  <select id="selectAllCourseBySchoolName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+      *
+    from
+      course
+    where
+      sch_name = #{schName}
+  </select>
+
+  <!--下面是章海翔的配置-->
+
+  <!--选课人数加一-->
+  <update id="addSelectNum">
+    update course
+    set course_selectnum = course_selectnum + 1
+    where cid = #{cid}
+  </update>
+
+  <!--选课人数减一-->
+  <update id="subSelectNum">
+    update course
+    set course_selectnum = course_selectnum - 1
+    where cid = #{cid}
+  </update>
+
+  <!-- 查找学校的课程信息 -->
+  <select id="findCourseBySid" parameterType="cn.young.manager.pojo.Page" resultMap="BaseResultMap">
+		select * from course where sch_name = #{schName} limit #{page},#{limit}
+  </select>
 </mapper>

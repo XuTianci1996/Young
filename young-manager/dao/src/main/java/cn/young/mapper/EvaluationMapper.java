@@ -27,4 +27,12 @@ public interface EvaluationMapper {
     int updateByPrimaryKeySelective(Evaluation record);
 
     int updateByPrimaryKey(Evaluation record);
+
+    /**
+     * 根据课程编号获取课程
+     * @param course_code
+     * @return
+     */
+    Evaluation getEvaluationByCourse_code(String course_code);
+
 }

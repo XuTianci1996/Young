@@ -74,4 +74,15 @@ public class UserServiceImpl implements UserService {
         userMapper.deleteByPrimaryKey(uid);
         return YoungResult.ok();
     }
+
+    /**
+     * 通过uid获取用户名和用户头像
+     *
+     * @param uid
+     * @return
+     */
+    @Override
+    public User getUnameAndUimage(int uid) {
+        return userMapper.getUnameAndUimage(uid);
+    }
 }

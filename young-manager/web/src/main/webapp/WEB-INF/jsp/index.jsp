@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/k-style.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <script src="layui/layui.js"></script>
+
 </head>
 <body>
 <div class="layui-carousel" id="bg-item">
@@ -22,21 +23,41 @@
             </div>
 
             <c:if test="${not empty loginUser }">
-                <div class="personalCenter layui-pull-right"><a href="toUserSystem" target="_blank" style="color:#fff"><i class="layui-icon layui-icon-tree"></i> 个人中心</a></div>
+                <div class="personalCenter layui-pull-right"><a class="operation" href="toUserSystem" target="_blank" style="color:#fff"><i class="layui-icon layui-icon-read"></i> 个人中心</a></div>
             </c:if>
             <c:if test="${empty loginUser }">
-                <div class="operation layui-pull-right"><i class="layui-icon layui-icon-tree"></i> 学生登录</div>
+
+                <div class="operation layui-pull-right"><i class="layui-icon layui-icon-read"></i> 学生登录</div>
             </c:if>
-            <div class="personalCenter layui-pull-right"><a href="toUserSystem" target="_blank" style="color:#fff"><i class="layui-icon layui-icon-tree"></i>院校</a></div>
+
+            <div class="personalCenter layui-pull-right">
+                <a class="1" href="school"><i class="layui-icon layui-icon-read"></i>院校</a></div>
         </div>
+
+        <%--<ul class="layui-nav">--%>
+        <%--<li class="layui-nav-item">--%>
+        <%--<a href="">院校<span class="layui-badge">9</span></a>--%>
+        <%--</li>--%>
+        <%--<li class="layui-nav-item">--%>
+        <%--<a href="">个人中心<span class="layui-badge-dot"></span></a>--%>
+        <%--</li>--%>
+        <%--<li class="layui-nav-item">--%>
+        <%--<a href=""><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>--%>
+        <%--<dl class="layui-nav-child">--%>
+        <%--<dd><a href="javascript:;">修改信息</a></dd>--%>
+        <%--<dd><a href="javascript:;">安全管理</a></dd>--%>
+        <%--<dd><a href="javascript:;">退出登录</a></dd>--%>
+        <%--</dl>--%>
+        <%--</li>--%>
+        <%--</ul>--%>
     </div>
     <!--搜索框-->
     <div class="layui-container">
         <div class="seach-input">
-            <form class="seach-form layui-form" method="post" action="findHouseByLike">
+            <form class="seach-form layui-form" method="post" action="/findCourseByLike">
                 <div class="layui-pull-left input">
 
-                    <input type="text" placeholder="课程名称." name="keywords" class="seach layui-input"  lay-verify="">
+                    <input type="text" placeholder="课程名称." name="keywords" class="seach layui-input"   lay-verify="required">
                 </div>
                 <div class="layui-pull-left button">
                     <button class="btn seach-btn" lay-submit><i class="layui-icon layui-icon-search" style="font-size: 24px;"></i></button>
@@ -88,13 +109,13 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">用户名</label>
                             <div class="layui-input-block">
-                                <input type="text" name="uname" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                                <input type="text" name="uname"   lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">密码</label>
                             <div class="layui-input-block">
-                                <input type="password" name="password" required  id="registPassword" lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                                <input type="password" name="password"  id="registPassword" lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -126,28 +147,38 @@
 </div>
 <div class="course wCenter">
 
-    <div class="img"  style="width: 100%;text-align: center;"></div>
-    <div class="img"  style="width: 100%;text-align: center;"><img src="../img/hot-course.png" alt=""></div>
+    <div class="img"  style="width: 100%;text-align: center;">
 
+    </div>
+    <div class="img"  style="width: 100%;text-align: center;">
+        <c:if test="${ empty Course}">
+            <div class="img"  style="width: 100%;text-align: center;"  > <img src="../img/hot-course.png" alt="" name="hotcourse"></div>
+
+        </c:if>
+    <c:if test="${ not empty Course}">
+
+        <fieldset class="layui-elem-field layui-field-title" id="referedCourse">
+            <legend>   相关课程</legend>
+        </fieldset>
+    </c:if>
     <div class="detail">
-
         <ul>
             <c:forEach items="${HotCourse}" var="h">
-            <li><a href="javascript:if(confirm('http://zjedu.moocollege.com/course/detail/30008288  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://zjedu.moocollege.com/course/detail/30008288'">
-                <div class="img">
-                    <img src="${h.courseImage}" alt="">
+                <li><a href="coursedetails?cid=${h.cid}"}>
+                    <div class="img">
+                        <img src="${h.courseImage}" alt="">
 
-                </div>
-                <div class="status">
-                    <p><span>${h.courseName}</span><span class="icon"></span></p>
-                    <p><span class="planing">正在开课</span><span><img src="" alt="">${h.courseSelectnum}</span></p>
-                </div>
-                <div class="person">
-                    <span><img src=""alt=""></span>
-                    <span>${h.schName}</span>
-                </div>
-            </a>
-            </li>
+                    </div>
+                    <div class="status">
+                        <p><span>${h.courseName}</span><span class="icon"></span></p>
+                        <p><span class="planing">正在开课</span><span><img src="" alt="">${h.courseSelectnum}</span></p>
+                    </div>
+                    <div class="person">
+                        <span><img src=""alt=""></span>
+                        <span>${h.schName}</span>
+                    </div>
+                </a>
+                </li>
             </c:forEach>
 
 
@@ -155,6 +186,31 @@
 
     </div>
 
+</div>
+<div class="course wCenter">
+    <div class="detail">
+        <ul>
+            <c:forEach items="${Course}" var="c">
+                <li><a href="/coursedetails?cid=${c.cid}">
+                    <div class="img">
+                        <img src="${c.courseImage}" alt="">
+
+                    </div>
+                    <div class="status">
+                        <p><span>${c.courseName}</span><span class="icon"></span></p>
+                        <p><span class="planing">正在开课</span><span><img src="" alt="">${c.courseSelectnum}</span></p>
+                    </div>
+                    <div class="person">
+                        <span><img src=""alt=""></span>
+                        <span>${c.schName}</span>
+                    </div>
+                </a>
+                </li>
+            </c:forEach>
+
+        </ul>
+
+    </div>
 </div>
 <div class="course wCenter">
     <div class="img"  style="width: 100%;text-align: center;"><img src="../img/tj-course.png" alt=""></div>
@@ -285,46 +341,47 @@
     </div>
 </div>
 
-<div class="parterner wCenter">
 
 
 <div class="parterner wCenter">
-    <div class="title" >
-        <span><i class="school-parter" style="color: #0E7DFF" ></i></span>
-    </div>
+
+    <fieldset class="layui-elem-field layui-field-title site-demo-button" style="margin-top: 50px;">
+        <legend>合作院校</legend>
+    </fieldset>
+
     <div class="detail">
         <div class="items">
-            <div class="left">合作院校</div>
-            <div class="item"><a href="/Province/Index/schooldetail?orgId=39"><img src="img/dnxiaohui.png" alt=""></a></div>
-            <div class="item"><a href="/Province/Index/schooldetail?orgId=40"><img src="img/zkdxiaohui.png" alt=""></a></div>
-            <div class="item"><a href="/Province/Index/schooldetail?orgId=39"><img src="img/kongbai.png" alt=""></a></div>
-            <div class="item"><a href="/Province/Index/schooldetail?orgId=40"><img src="img/kongbai.png" alt=""></a></div>
-            <div class="item"><a href="/Province/Index/schooldetail?orgId=39"><img src="img/kongbai.png" alt=""></a></div>
-            <div class="item"><a href="/Province/Index/schooldetail?orgId=40"><img src="img/kongbai.png" alt=""></a></div>
-</div>
+            <%--<div class="left">合作院校</div>--%>
+                <div class="item"><a href="http://localhost:8080/schooldetail1?page=1&limit=20"><img src="img/dnxiaohui.png" alt=""></a></div>
+                <div class="item"><a href="http://localhost:8080/schooldetail2?page=1&limit=40"><img src="img/zkdxiaohui.png" alt=""></a></div>
+            <div class="item"><a href=""><img src="img/kongbai.png" alt=""></a></div>
+            <div class="item"><a href=""><img src="img/kongbai.png" alt=""></a></div>
+            <div class="item"><a href=""><img src="img/kongbai.png" alt=""></a></div>
+            <div class="item"><a href=""><img src="img/kongbai.png" alt=""></a></div>
+        </div>
 
 
-<div class="footer">
-    <div class="wCenter">
-        <div class="left">
-            <h5 class="black_color"><img src="../static/image/logo_small2@2x.png" alt="">独墅湖高教区课程资源共享平台</h5>
-            <p>课程内容版权均归课程内容提供者(机构)所有</p>
+        <div class="footer">
+            <div class="wCenter">
+                <div class="left">
+                    <h5 class="black_color"><img src="../static/image/logo_small2@2x.png" alt="">独墅湖高教区课程资源共享平台</h5>
+                    <p>课程内容版权均归课程内容提供者(机构)所有</p>
+                </div>
+                <div class="center">
+                    <dl>
+                        <dt><a class="black_color" href="Index/notice.htm">-平台介绍</a></dt>
+                        <dt><a class="black_color" href="Index/help.htm">-帮助中心</a></dt>
+                        <dt><a class="black_color" href="Index/concat.htm">-联系我们</a></dt>
+                        <!-- <dt><a class="black_color" href="http://">-关注我们</a></dt> -->
+                    </dl>
+                </div>
+                <div class="right">
+                    <p class="black_color">主管单位：东南苏州研究院</p>
+                    <p class="black_color">主办单位：独墅湖高教区课程资源共享平台管理中心</p>
+                    <p class="black_color">承办单位：Young项目组</p>
+                </div>
+            </div>
         </div>
-        <div class="center">
-            <dl>
-                <dt><a class="black_color" href="Index/notice.htm">-平台介绍</a></dt>
-                <dt><a class="black_color" href="Index/help.htm">-帮助中心</a></dt>
-                <dt><a class="black_color" href="Index/concat.htm">-联系我们</a></dt>
-                <!-- <dt><a class="black_color" href="http://">-关注我们</a></dt> -->
-            </dl>
-        </div>
-        <div class="right">
-            <p class="black_color">主管单位：东南苏州研究院</p>
-            <p class="black_color">主办单位：独墅湖高教区课程资源共享平台管理中心</p>
-            <p class="black_color">承办单位：Young项目组</p>
-        </div>
-    </div>
-</div>
 
         <script>
             layui.use(['element', 'carousel','layer','form'], function () {
@@ -357,7 +414,10 @@
 
                 $('#registSubmit').click(function () {
                     if($("input[name='uname']").val()!=""&&$("input[id='registPassword']").val()!=""&&$("input[name='telephone']").val()!=""&&$("input[id='confirmPassword']").val()!=""){
-                        if($("input[id='registPassword']").val()!=$("input[id='confirmPassword']").val()){
+                        if(!(/^1[34578]\d{9}$/.test($("input[name='telephone']").val()))){
+                            layer.msg("请输入正确的手机号！");
+                        }
+                        else if($("input[id='registPassword']").val()!=$("input[id='confirmPassword']").val()){
                             layer.msg("两次输入的密码不一致！");
                             $("input[id='registPassword']").val()=="";
                             $("input[id='confirmPassword']").val()=="";

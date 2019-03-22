@@ -35,4 +35,31 @@ public class EvaluationServiceImpl implements EvaluationService {
         result.setTotal(pageInfo.getTotal());
         return result;
     }
+
+    /**
+     * 根据课程编码，获取他的全部课程评价信息
+     *
+     * @param course_code
+     * @return com.harson.entities.Evaluation
+     */
+    @Override
+    public Evaluation getEvaluationByCourse_code(String course_code) {
+        Evaluation evaluation = evaluationMapper.getEvaluationByCourse_code(course_code);
+
+        if (evaluation == null){
+            return new Evaluation(course_code);
+        }
+        return evaluation;
+    }
+
+    /**
+     * 插入新的课程评价
+     *
+     * @param evaluation
+     * @return
+     */
+    @Override
+    public int insertEvaluation(Evaluation evaluation) {
+        return evaluationMapper.insert(evaluation);
+    }
 }

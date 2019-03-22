@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.Random;
 
 @Controller
 public class UserController {
@@ -36,7 +37,7 @@ public class UserController {
 
     }
 
-    @RequestMapping("/signout")
+    @RequestMapping(value = {"/signout", "/logout"})
     public String signout(HttpSession session) {
         session.invalidate();
         return "redirect:toIndexPage";
@@ -47,6 +48,9 @@ public class UserController {
     public String regist(User user) {
         String[] split = user.getPassword().split(",");
         user.setPassword(split[0]);
+        Random random = new Random();
+        int num = random.nextInt(1000);
+        user.setUimage("https://images.nowcoder.com/head/"+ num +"m.png");
         int regist;
         try {
             regist = userService.regist(user);
