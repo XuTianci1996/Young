@@ -62,4 +62,9 @@ public class EvaluationServiceImpl implements EvaluationService {
     public int insertEvaluation(Evaluation evaluation) {
         return evaluationMapper.insert(evaluation);
     }
+
+    @Override
+    public int updateEvaluation(Evaluation evaluation) {
+        return evaluationMapper.updateByCourse_code(evaluation);
+    }
 }

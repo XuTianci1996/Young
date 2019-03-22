@@ -24,7 +24,6 @@
 <section class="layui-container wrapper">
     <p class="breadcrumb">
 				<span class="layui-breadcrumb" lay-separator=">">
-					<%--请补充链接！！！--%>
 					<a href="/toIndexPage">首页</a>
 					<a href="javascript:;">课程详情</a>
 				</span>
@@ -56,7 +55,12 @@
             <ul>
                 <li>
                     <p>课程信息：</p>
-                    <span>${Course.courseInfo}</span>
+                    <c:if test="${empty loginUser}">
+                        <div class="operation2"><a style="font-size: 20px; font-weight: bold; color: #3D9EEA; cursor:pointer;">&nbsp;&nbsp;[请登录后查看信息]</a></div>
+                    </c:if>
+                    <c:if test="${not empty loginUser}">
+                        <span>${Course.courseInfo}</span>
+                    </c:if>
                 </li>
             </ul>
         </div>
@@ -126,7 +130,7 @@
                 double rate1_num = eva.getRate_one() * 100.0 / eva.getTotal();
                 String rate1 = String.format("%.1f", rate1_num);
 
-                if (eva.getTotal() == 0.0){
+                if (eva.getTotal() == 0.0) {
                     rate5 = "0.0";
                     rate4 = "0.0";
                     rate3 = "0.0";
@@ -214,18 +218,21 @@
     </div>
     <div class="comment_list">
 
-        <c:forEach items="${UserRemarkList}" var="Remark" varStatus="status">
-            <div class="comment">
-                <div class="imgdiv"><img class="imgcss" src="${Remark.uimage}"/></div>
-                <div class="conmment_details">
-                    <span class="comment_name ">${Remark.uname} </span>
-                    <span id="userrate${status.index}"></span>
-                    <span><fmt:formatDate value="${Remark.content_date}" pattern="yyyy年MM月dd日"/></span>
-                    <div class="comment_content">  ${Remark.content}</div>
+        <%--AJAX获取课程评价分页内容--%>
+        <%--<div id="paging-comment"></div>--%>
+
+            <c:forEach items="${UserRemarkList}" var="Remark" varStatus="status">
+                <div class="comment">
+                    <div class="imgdiv"><img class="imgcss" src="${Remark.uimage}"/></div>
+                    <div class="conmment_details">
+                        <span class="comment_name ">${Remark.uname} </span>
+                        <span id="userrate${status.index}"></span>
+                        <span><fmt:formatDate value="${Remark.content_date}" pattern="yyyy年MM月dd日"/></span>
+                        <div class="comment_content">  ${Remark.content}</div>
+                    </div>
                 </div>
-            </div>
-            <hr>
-        </c:forEach>
+                <hr>
+            </c:forEach>
 
         <div id="paging" style="text-align: center;"></div>
 
@@ -294,20 +301,6 @@
         });
         </c:forEach>
 
-        //显示分页
-        laypage.render({
-            elem: 'paging',
-            count: ${UserRemarkList.size()},
-            limit: 5,
-            layout: ['prev', 'page', 'next'],
-            theme: '#FFB800',
-            jump: function (obj, first) {
-                if (!first) {
-                    layer.msg('第 ' + obj.curr + ' 页');
-                }
-            }
-        });
-
         //轮播图效果（课程封面图片）
         carousel.render({
             elem: "#details-image",
@@ -318,7 +311,7 @@
 
         //弹窗
         var layer_index;
-        $('.operation').click(function () {
+        $('.operation, .operation2').click(function () {
             layer_index = layer.open({
                 type: 1,
                 content: $('#sign'),
@@ -335,25 +328,25 @@
 
         //注册
         $('#registSubmit').click(function () {
-            if($("input[name='uname']").val()!=""&&$("input[id='registPassword']").val()!=""&&$("input[name='telephone']").val()!=""&&$("input[id='confirmPassword']").val()!=""){
-                if($("input[id='registPassword']").val()!=$("input[id='confirmPassword']").val()){
+            if ($("input[name='uname']").val() != "" && $("input[id='registPassword']").val() != "" && $("input[name='telephone']").val() != "" && $("input[id='confirmPassword']").val() != "") {
+                if ($("input[id='registPassword']").val() != $("input[id='confirmPassword']").val()) {
                     layer.msg("两次输入的密码不一致！");
-                    $("input[id='registPassword']").val()=="";
-                    $("input[id='confirmPassword']").val()=="";
+                    $("input[id='registPassword']").val() == "";
+                    $("input[id='confirmPassword']").val() == "";
 
-                }else{
-                    $.post("regist",$('.form').serialize(),function (res) {
+                } else {
+                    $.post("regist", $('.form').serialize(), function (res) {
                         console.log(res);
-                        if(res=='OK'){
+                        if (res == 'OK') {
                             layer.close(layer_index);
-                            layer.alert("注册成功!",{icon:1,time:2000});
+                            layer.alert("注册成功!", {icon: 1, time: 2000});
                             $('.form')[0].reset();
-                        }else{
+                        } else {
                             layer.msg("注册失败!");
                         }
                     })
                 }
-            }else{
+            } else {
                 layer.msg("请填写所有表单");
             }
         });
@@ -417,11 +410,11 @@
                 return;
             }
             //选课
-            if(ischoose == 0){
+            if (ischoose == 0) {
                 $.post("chooseCourse", {
                     cid: $("#course-id").val(),
                     uid: $("#user-id").val(),
-                    course_code: $("#course-code").val()
+                    course_code: "${Course.courseCode}" //修复BUG: 课程编号无法传送！
                 }, function (data) {
                     if (data == "OK") {
                         layer.alert("恭喜你，选课成功！", {
@@ -432,20 +425,20 @@
                         $("#select-btn").html("退出课程");
                         element.init();
                         ischoose = 1;
-                    }else if (data == "FULL") {
+                    } else if (data == "FULL") {
                         layer.alert("对不起，该课已满！", {
                             icon: 2
                         });
                     }
                 });
-            }else{
+            } else {
                 //退课
                 //先询问意见：真的要退出吗？
                 layer.confirm('您确定要退出这门课程吗？', {
-                    btn: ['我再想想','去意已决'] //按钮
-                }, function(){
+                    btn: ['我再想想', '去意已决'] //按钮
+                }, function () {
                     layer.msg('期待您做出正确的决定！', {icon: 6});
-                }, function(){
+                }, function () {
                     $.post("quitCourse", {
                         cid: $("#course-id").val(),
                         uid: $("#user-id").val()

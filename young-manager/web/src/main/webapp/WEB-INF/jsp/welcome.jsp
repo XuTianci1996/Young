@@ -33,7 +33,7 @@
 </head>
 <body>
 <div class="welcome">
-    <p><span class="layui-icon layui-icon-tree"></span></p>
+    <p><span class="layui-icon layui-icon-read"></span></p>
     <p class="wel-world">欢迎进入独墅湖课程分享中心！</p>
 </div>
 </body>

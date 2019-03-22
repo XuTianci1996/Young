@@ -35,4 +35,11 @@ public interface EvaluationMapper {
      */
     Evaluation getEvaluationByCourse_code(String course_code);
 
+    /**
+     * 根据课程编号更新课程
+     * @param evaluation
+     * @return
+     */
+    int updateByCourse_code(Evaluation evaluation);
+
 }

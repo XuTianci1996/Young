@@ -65,14 +65,20 @@ public class UserController {
 
 
     @RequestMapping("/toUserSystem")
-    public String toUserSystemPage() {
-        return "customer";
+    public String toUserSystemPage(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        User loginUser = (User) session.getAttribute("loginUser");
+        if (loginUser != null){
+            return "customer";
+        }else {
+            return "redirect:index";
+        }
     }
 
-    @RequestMapping("/toUserRentalPage")
-    public String toUserRentalPage() {
-        return "myrental";
-    }
+//    @RequestMapping("/toUserRentalPage")
+//    public String toUserRentalPage() {
+//        return "myrental";
+//    }
 
     @RequestMapping("/welcome")
     public String toWelcomePage() {
@@ -100,6 +106,21 @@ public class UserController {
         }
         return "FAIL";
     }
+
+    @RequestMapping("/myorder")
+    public String myCourseInfo(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        User loginUser = (User) session.getAttribute("loginUser");
+        if (loginUser != null){
+            return "myorder";
+        }else {
+            return "redirect:index";
+        }
+
+    }
+
+
+
 //    //删除用户
 //    @RequestMapping(value = "/rest/user/delete",method = RequestMethod.POST)
 //    @ResponseBody

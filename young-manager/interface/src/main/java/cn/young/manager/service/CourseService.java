@@ -4,6 +4,7 @@ package cn.young.manager.service;
 import cn.young.common.pojo.EasyUIDataGrid;
 import cn.young.manager.pojo.Course;
 import cn.young.manager.pojo.Page;
+import cn.young.manager.pojo.PagingData;
 
 import java.util.List;
 
@@ -33,4 +34,13 @@ public interface CourseService {
      * @return
      */
     Course getCourseByCid(int cid);
+
+    /**
+     * 根据用户uid，获取他的选课信息，分页！！
+     * @param uid
+     * @param page
+     * @param limit
+     * @return
+     */
+    PagingData<Course> getMyCourseByUid(int uid, int page, int limit);
 }

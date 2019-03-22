@@ -1,6 +1,4 @@
-package cn.young.manager.service;
-
-import static org.junit.Assert.*;
+package service;
 
 public class CourseSelectedServiceTest {
 

@@ -4,6 +4,7 @@ import cn.young.common.pojo.EasyUIDataGrid;
 import cn.young.manager.pojo.*;
 import cn.young.manager.service.CourseService;
 import cn.young.mapper.CourseMapper;
+import cn.young.mapper.CourseSelectedMapper;
 import cn.young.mapper.SchoolMapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -21,6 +22,9 @@ public class CourseImpl implements CourseService {
 
     @Autowired
     private SchoolMapper schoolMapper;
+
+    @Autowired
+    private CourseSelectedMapper courseSelectedMapper;
 
     /**
      *
@@ -92,5 +96,30 @@ public class CourseImpl implements CourseService {
         List<Course> courses = courseMapper.findCourseBySid(page);
         return courses;
 
+    }
+
+    @Override
+    public PagingData<Course> getMyCourseByUid(int uid, int page, int limit) {
+
+       //根据uid，查询所选课程的cid
+        int index = (page - 1) * limit;
+        List<Integer> cidList = courseSelectedMapper.getLimitedCidByUid(uid, index, limit);
+
+        //for循环，根据cid，查询所有课程信息
+        List<Course> courseList = new ArrayList<>();
+        for (Integer cid : cidList) {
+            Course course = courseMapper.getCourseByCid(cid);
+            courseList.add(course);
+        }
+
+        //各参数封装到pageBean中
+        int total = courseSelectedMapper.getSelectedCountByUid(uid);
+
+        PagingData<Course> pagingData = new PagingData<>();
+        pagingData.setCode(0);
+        pagingData.setMsg("200");
+        pagingData.setData(courseList);
+        pagingData.setCount(total);
+        return pagingData;
     }
 }

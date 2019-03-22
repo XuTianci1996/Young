@@ -14,7 +14,7 @@ public class CourseSelected implements Serializable {
 
     private Integer mark;
 
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    @JsonFormat(pattern="yyyy-MM-dd",timezone="GMT+8")
     private Date contentDate;
 
     private Integer status;

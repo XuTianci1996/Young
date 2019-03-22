@@ -20,4 +20,6 @@ public interface EvaluationService {
      * @return
      */
     int insertEvaluation(Evaluation evaluation);
+
+    int updateEvaluation(Evaluation evaluation);
 }

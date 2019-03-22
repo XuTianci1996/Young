@@ -59,4 +59,11 @@ public interface CourseMapper {
      * @return
      */
     int subSelectNum(@Param("cid") int cid);
+
+    /**
+     * 根据cid选course
+     * @param cid
+     * @return
+     */
+    Course getCourseByCid(@Param("cid")  int cid);
 }

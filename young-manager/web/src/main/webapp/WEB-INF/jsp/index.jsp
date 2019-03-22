@@ -5,13 +5,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="layui/css/layui.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/layui/css/layui.css"/>
     <title>独墅湖高教区课程资源共享平台</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/h-school.css">
-    <link rel="stylesheet" href="css/k-style.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <script src="layui/layui.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/global.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/h-school.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/k-style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/swiper.min.css">
+    <script src="${pageContext.request.contextPath}/layui/layui.js"></script>
 
 </head>
 <body>
@@ -19,7 +19,7 @@
     <div class="layui-header title">
         <div class="layui-container">
             <div class="layui-logo layui-pull-left">
-                <img src="img/frontpagelogo.png" width="360px">
+                <img src="${pageContext.request.contextPath}/img/frontpagelogo.png" width="360px">
             </div>
 
             <c:if test="${not empty loginUser }">
@@ -54,7 +54,7 @@
     <!--搜索框-->
     <div class="layui-container">
         <div class="seach-input">
-            <form class="seach-form layui-form" method="post" action="/findCourseByLike">
+            <form class="seach-form layui-form" method="post" action="${pageContext.request.contextPath}/findCourseByLike">
                 <div class="layui-pull-left input">
 
                     <input type="text" placeholder="课程名称." name="keywords" class="seach layui-input"   lay-verify="required">
@@ -151,11 +151,15 @@
 
     </div>
     <div class="img"  style="width: 100%;text-align: center;">
-        <c:if test="${ empty Course}">
-            <div class="img"  style="width: 100%;text-align: center;"  > <img src="../img/hot-course.png" alt="" name="hotcourse"></div>
+        <c:if test="${empty key}">
+
+            <div class="img"  style="width: 100%;text-align: center;"  > <img src="${pageContext.request.contextPath}/img/hot-course.png" alt="" name="hotcourse"></div>
 
         </c:if>
-    <c:if test="${ not empty Course}">
+<%--<c:if test="${ empty Course}">--%>
+    <%--<script>alert("没有该相关课程");</script>--%>
+<%--</c:if>--%>
+        <c:if test="${ not empty Course}">
 
         <fieldset class="layui-elem-field layui-field-title" id="referedCourse">
             <legend>   相关课程</legend>
@@ -191,7 +195,7 @@
     <div class="detail">
         <ul>
             <c:forEach items="${Course}" var="c">
-                <li><a href="/coursedetails?cid=${c.cid}">
+                <li><a href="${pageContext.request.contextPath}/coursedetails?cid=${c.cid}">
                     <div class="img">
                         <img src="${c.courseImage}" alt="">
 

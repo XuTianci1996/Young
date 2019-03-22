@@ -99,10 +99,11 @@
     </if>
   </delete>
   <insert id="insert" parameterType="cn.young.manager.pojo.Evaluation">
-    insert into evaluation (eid, course_code, average_mark, 
-      total)
-    values (#{eid,jdbcType=BIGINT}, #{courseCode,jdbcType=VARCHAR}, #{averageMark,jdbcType=DOUBLE}, 
-      #{total,jdbcType=INTEGER})
+    insert into evaluation (course_code, average_mark, rate_five, rate_four, rate_three, rate_two, rate_one,
+                            total)
+      values (#{courseCode,jdbcType=VARCHAR}, #{averageMark,jdbcType=DOUBLE},
+              #{rate_five, jdbcType=INTEGER}, #{rate_four, jdbcType=INTEGER}, #{rate_three, jdbcType=INTEGER}, #{rate_two, jdbcType=INTEGER}, #{rate_one, jdbcType=INTEGER},
+              #{total,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="cn.young.manager.pojo.Evaluation">
     insert into evaluation
@@ -198,4 +199,16 @@
   <select id="getEvaluationByCourse_code" resultType="cn.young.manager.pojo.Evaluation" parameterType="java.lang.String">
     select * from evaluation where course_code = #{course_code}
   </select>
+
+  <update id="updateByCourse_code" parameterType="cn.young.manager.pojo.Evaluation">
+    update evaluation
+    set average_mark = #{averageMark},
+        total = #{total},
+        rate_five = #{rate_five},
+        rate_four = #{rate_four},
+        rate_three = #{rate_three},
+        rate_two = #{rate_two},
+        rate_one = #{rate_one}
+    where course_code = #{courseCode}
+  </update>
 </mapper>

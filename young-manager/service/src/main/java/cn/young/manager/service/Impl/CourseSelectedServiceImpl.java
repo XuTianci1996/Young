@@ -3,9 +3,7 @@ package cn.young.manager.service.Impl;
 
 import cn.young.common.pojo.EasyUIDataGrid;
 import cn.young.common.pojo.YoungResult;
-import cn.young.manager.pojo.Course;
-import cn.young.manager.pojo.CourseSelected;
-import cn.young.manager.pojo.CourseSelectedExample;
+import cn.young.manager.pojo.*;
 import cn.young.manager.service.CourseSelectedService;
 import cn.young.mapper.CourseMapper;
 import cn.young.mapper.CourseSelectedMapper;
@@ -15,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -45,6 +45,85 @@ public class CourseSelectedServiceImpl implements CourseSelectedService {
     public YoungResult clearEvaluation(long uid, long cid ) {
         courseSelectedMapper.clearEvaluation(uid, cid);
         return YoungResult.ok();
+    }
+
+    /**
+     * 根据用户id，获取他的全部评价信息（course_selected中）和必要的课程信息（course表中）
+     *
+     * @param uid
+     * @param page
+     * @param limit
+     * @return
+     */
+    @Override
+    public PagingData<MyRemark> getMyRemarkByUid(int uid, int page, int limit) {
+        PagingData<MyRemark> myRemarkPagingData = new PagingData<>();
+        List<MyRemark> myRemarkList = new ArrayList<>();
+
+        int index = (page - 1) * limit;
+        List<CourseSelected> remarkList = courseSelectedMapper.getLimitedRemarkByUid(uid, index, limit);
+        for (CourseSelected remark: remarkList){
+            long cid = remark.getCid();
+            Course course = courseMapper.getCourseByCid((int) cid);
+
+            MyRemark myRemark = new MyRemark();
+            myRemark.setCid(cid);
+            myRemark.setContent(remark.getContent());
+            myRemark.setMark(remark.getMark());
+            myRemark.setCourseCode(course.getCourseCode());
+            myRemark.setCourseName(course.getCourseName());
+            myRemark.setSchName(course.getSchName());
+            myRemark.setContent_date(remark.getContentDate());
+
+            myRemarkList.add(myRemark);
+        }
+
+        int total = courseSelectedMapper.getSelectedCountByUid(uid);
+
+        myRemarkPagingData.setCode(0);
+        myRemarkPagingData.setMsg("200");
+        myRemarkPagingData.setCount(total);
+        myRemarkPagingData.setData(myRemarkList);
+
+        return myRemarkPagingData;
+    }
+
+    /**
+     * 选出用户对某门课程的评价
+     *
+     * @param cid
+     * @param uid
+     * @return
+     */
+    @Override
+    public CourseSelected getMyRemarkByCidAndUid(int cid, int uid) {
+        return courseSelectedMapper.getMyRemarkByCidAndUid(cid, uid);
+    }
+
+    /**
+     * 根据cid，uid修改用户对这门课程的评价
+     *
+     * @param cid
+     * @param uid
+     * @param content
+     * @param mark
+     * @return
+     */
+    @Override
+    public int updateRemark(int cid, int uid, String content, int mark) {
+        Date content_date = new Date();
+        return courseSelectedMapper.updateRemarkByCidAndUid(cid, uid, content, mark, content_date);
+    }
+
+    /**
+     * 从course_selected表中，根据course_code选出当前课程的所有评分
+     *
+     * @param courseCode
+     * @return
+     */
+    @Override
+    public List<Integer> getAllMarkByCourse_code(String courseCode) {
+        return courseSelectedMapper.getAllMarkByCourse_code(courseCode);
     }
 
 

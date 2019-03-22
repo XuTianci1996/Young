@@ -327,4 +327,11 @@
   <select id="findCourseBySid" parameterType="cn.young.manager.pojo.Page" resultMap="BaseResultMap">
 		select * from course where sch_name = #{schName} limit #{page},#{limit}
   </select>
+
+  <!-- 获得课程信息 -->
+  <select id="getCourseByCid" resultMap="BaseResultMap">
+        select *
+        from course
+        where cid = #{cid}
+    </select>
 </mapper>

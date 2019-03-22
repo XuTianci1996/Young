@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+         pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +35,7 @@
             <li class="layui-nav-item">
                 <a href="javascript:;">用户信息管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="myorder" target="iframe">我的课程信息</a></dd>
+
                     <dd><a href="updatepwd" target="iframe">修改我的密码</a></dd>
                 </dl>
             </li>
@@ -44,8 +44,8 @@
             <li class="layui-nav-item">
                 <a href="javascript:;">课程信息管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="addHouse" target="iframe">选择课程</a></dd>
-                    <dd><a href="toUserRentalPage" target="iframe">我的课程</a></dd>
+                    <dd><a href="myorder" target="iframe">我的课程信息</a></dd>
+                    <dd><a href="myremark" target="iframe">我的课程评价</a></dd>
                 </dl>
             </li>
         </ul>
@@ -54,7 +54,7 @@
         <iframe src="welcome" width="100%" height="100%" frameborder="0" name="iframe" scrolling="auto" seamless></iframe>
     </div>
     <div class="layui-footer" style="text-align: center;font-size: 16px">
-        <p>2018年 毕业设计</p>
+        <p>Young项目组</p>
     </div>
 </div>
 <script src="layui/layui.js"></script>

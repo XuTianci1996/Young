@@ -287,4 +287,81 @@
     from course_selected
     where cid = #{cid} and uid = #{uid}
   </select>
+
+  <!--选出限定范围内的用户评价数据-->
+  <select id="getLimitedRemarkByCourse_code" resultType="cn.young.manager.pojo.CourseSelected">
+        select uid,
+               mark,
+               content,
+               content_date
+        from course_selected
+        where course_code = #{course_code}
+        limit #{index}, #{limit}
+    </select>
+
+  <!-- 选出这门课程编号下的评价总数 -->
+  <select id="getRemarkNumByCourse_code" resultType="int">
+        select count(*)
+        from course_selected
+        where course_code = #{course_code}
+    </select>
+
+  <!--选出对应uid下的cid-->
+  <select id="getCidByUid" resultType="INTEGER">
+        select cid
+        from course_selected
+        where uid = #{uid}
+    </select>
+
+  <!-- 查找用户选课总数 -->
+  <select id="getSelectedCountByUid" resultType="int">
+        select count(*)
+        from course_selected
+        where uid = #{uid}
+          and ischoose = 1;
+    </select>
+
+  <!--选出对应uid下的cid,分页-->
+  <select id="getLimitedCidByUid" resultType="INTEGER">
+        select cid
+        from course_selected
+        where uid = #{uid}
+          and ischoose = 1
+        limit #{index}, #{limit}
+    </select>
+
+  <!--已选课程的评价信息-->
+  <select id="getLimitedRemarkByUid" resultType="cn.young.manager.pojo.CourseSelected">
+        select cid, course_code, mark, content, content_date
+        from course_selected
+        where uid = #{uid}
+          and ischoose = 1
+        limit #{index}, #{limit}
+    </select>
+
+  <!-- 根据cid，uid选出评价内容，如果评价（or）不为空，flag设为1，evaluation的total不更新 -->
+  <select id="getMyRemarkByCidAndUid" resultMap="BaseResultMap">
+        select mark, content, course_code, cid
+        from course_selected
+        where uid = #{uid}
+          and cid = #{cid}
+    </select>
+
+  <!-- 保存/更新评价内容(注意还有Evaluation表要改) -->
+  <update id="updateRemarkByCidAndUid">
+        update course_selected
+        set content      = #{content},
+            mark         = #{mark},
+            content_date = #{content_date}
+        where cid = #{cid}
+          and uid = #{uid}
+    </update>
+
+  <!--根据course_code选出当前课程的所有评分-->
+  <select id="getAllMarkByCourse_code" resultType="INTEGER">
+        select mark
+        from course_selected
+        where course_code = #{courseCode}
+    </select>
+
 </mapper>
