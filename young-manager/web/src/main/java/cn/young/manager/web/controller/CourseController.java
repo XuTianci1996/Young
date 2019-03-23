@@ -20,20 +20,23 @@ public class CourseController {
 
     @RequestMapping("/findCourseByLike")
     public String findHouseByLike(HttpServletRequest request, String keywords) {
-//		List<Course> findHomeInfo = service.findCourseByLike(keywords);
-//		request.getSession().removeAttribute("HotCourse");
-//		request.getSession().setAttribute("HotCourse", findHomeInfo);
-//		return "index";
+
+        Boolean flag = null;
+        if (keywords!=null){
+            flag=true;
+        }
         request.getSession().setAttribute("key", keywords);
         List<Course> findCourse = service.findCourseByLike(keywords);
         request.getSession().removeAttribute("HotCourse");
         request.getSession().removeAttribute("ha");
         request.getSession().setAttribute("Course", findCourse);
+        request.getSession().setAttribute("flag", flag);
 
         System.out.println(keywords);
 
-        return "index";
+        return "indexTo";
     }
+
 
 
     @RequestMapping("/myCourseInfo")

@@ -16,6 +16,13 @@
     <script src="layui/layui.js"></script>
     <script src="js/html5shiv.min.js" type="text/javascript"></script>
     <script src="js/selectivizr.min.js" type="text/javascript"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#list${page}").addClass("active");
+        });
+
+    </script>
 
 </head>
 <body>
@@ -38,15 +45,11 @@
     </div>
 </div>
 
-<br>
-<br>
-<br>
+<br><br><br>
+
 
 <div class="layui-container layui-pull-center" style="margin-bottom: 30px;width: 1300px;">
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br>
 
     <fieldset class="layui-elem-field ">
 
@@ -68,9 +71,7 @@
 
     </fieldset>
 
-    <br>
-    <br>
-    <br>
+    <br><br><br>
     <fieldset class="layui-elem-field ">
 
         <legend>
@@ -94,14 +95,13 @@
                                 </div>
                                 <div class="person">
                                     <span><img src=""alt=""></span>
-                                    <span>${c.schName}</span>
+                                    <span><img src="img/zkdxiaohui.png"width="25" height="15" style="vertical-align:middle">${c.schName}</span>
                                 </div>
                                 </a>
                             </li>
                         </c:forEach>
 
                     </ul>
-
                 </div>
             </div>
         </div>
@@ -112,32 +112,30 @@
 <div class="page_wrap">
     <div class="page_min">
         <ul>
-            <form class="" method="post" action="/coursePre1">
+            <c:if test="${page>1}">
+                <li style="margin-right: 10px;"><a href="http://localhost:8080/schooldetail2?page=${page-1}&limit=40" class="next">上一页</a></li>
 
-                <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button>
-            </form>
+            </c:if>
 
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=1&limit=40">1</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=2&limit=40">2</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=3&limit=40">3</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=4&limit=40">4</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=5&limit=40">5</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=6&limit=40">6</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=7&limit=40">7</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=8&limit=40">8</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=9&limit=40">9</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=10&limit=40">10</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=11&limit=40">11</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=12&limit=40">12</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=13&limit=40">13</a></li>
-            <li class=""><a  href="http://localhost:8080/schooldetail2?page=14&limit=40">14</a></li>
-            <form class="" method="post" action="/courseNext1">
+            <li class="" id="list1"><a  href="http://localhost:8080/schooldetail2?page=1&limit=40">1</a></li>
+            <li class="" id="list2"><a  href="http://localhost:8080/schooldetail2?page=2&limit=40">2</a></li>
+            <li class="" id="list3"><a  href="http://localhost:8080/schooldetail2?page=3&limit=40">3</a></li>
+            <li class="" id="list4"><a  href="http://localhost:8080/schooldetail2?page=4&limit=40">4</a></li>
+            <li class="" id="list5"><a  href="http://localhost:8080/schooldetail2?page=5&limit=40">5</a></li>
+            <li class="" id="list6"><a  href="http://localhost:8080/schooldetail2?page=6&limit=40">6</a></li>
+            <li class="" id="list7"><a  href="http://localhost:8080/schooldetail2?page=7&limit=40">7</a></li>
+            <li class="" id="list8"><a  href="http://localhost:8080/schooldetail2?page=8&limit=40">8</a></li>
+            <li class="" id="list9"><a  href="http://localhost:8080/schooldetail2?page=9&limit=40">9</a></li>
+            <li class="" id="list10"><a  href="http://localhost:8080/schooldetail2?page=10&limit=40">10</a></li>
+            <li class="" id="list11"><a  href="http://localhost:8080/schooldetail2?page=11&limit=40">11</a></li>
+            <li class="" id="list12"><a  href="http://localhost:8080/schooldetail2?page=12&limit=40">12</a></li>
+            <li class="" id="list13"><a  href="http://localhost:8080/schooldetail2?page=13&limit=40">13</a></li>
+            <li class="" id="list14"><a  href="http://localhost:8080/schooldetail2?page=14&limit=40">14</a></li>
 
+            <c:if test="${page<14}">
+                <li style="margin-right: 10px;"><a href="http://localhost:8080/schooldetail2?page=${page+1}&limit=40" class="next">下一页</a></li>
 
-                <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button>
-            </form>
-
-            <%--<li style="margin-right: 10px;"><a href="http://zjedu.moocollege.com/Province/Index/schooldetail/2?orgId=38" class="next">下一页</a></li>--%>
+            </c:if>
         </ul>
     </div>
 </div>
@@ -145,7 +143,6 @@
 </div>
 
 <div class="parterner wCenter" >
-
 
     <div class="footer">
         <div class="wCenter">

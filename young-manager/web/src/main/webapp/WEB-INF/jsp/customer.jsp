@@ -35,8 +35,9 @@
             <li class="layui-nav-item">
                 <a href="javascript:;">用户信息管理</a>
                 <dl class="layui-nav-child">
-
                     <dd><a href="updatepwd" target="iframe">修改我的密码</a></dd>
+                    <dd><a href="addhouse" target="iframe">个人信息认证</a></dd>
+                    <dd><a href="recommend" target="iframe">我的专属推荐</a></dd>
                 </dl>
             </li>
         </ul>

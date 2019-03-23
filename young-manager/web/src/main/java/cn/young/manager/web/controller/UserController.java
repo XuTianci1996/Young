@@ -119,6 +119,29 @@ public class UserController {
 
     }
 
+    @RequestMapping("/addHouseRecord")
+    @ResponseBody
+    public String validationInfo(String id,String school,int stu_number,String stu_name,String telephone,String email,int sex) {
+        User oldUser = new User();
+        oldUser.setUid(Long.parseLong(id));
+        //oldUser.setPassword(oldPwd);
+        //User checkUser = iUserService.checkOldPwd(oldUser);
+        //if(checkUser!=null) {
+        User newUser = new User();
+        newUser.setUid(Long.parseLong(id));
+        newUser.setSchool(school);
+        newUser.setStuName(stu_name);
+        newUser.setStuNumber((long)stu_number);
+        newUser.setTelephone(telephone);
+        newUser.setEmail(email);
+        newUser.setSex(sex);
+        int n = userService.validationInfo(newUser);
+        if(n>0) {
+            return "OK";
+        }
+        //}
+        return "FAIL";
+    }
 
 
 //    //删除用户

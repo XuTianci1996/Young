@@ -59,4 +59,11 @@ public interface UserMapper {
      * @return
      */
     User getUnameAndUimage(int uid);
+
+    /*
+
+ 验证信息
+  */
+    public int validationInfo(User user);
+
 }

@@ -44,4 +44,9 @@ public interface UserService {
      * @return
      */
     User getUnameAndUimage(int uid);
+
+    /**
+     * 验证信息
+     */
+    int validationInfo(User user);
 }

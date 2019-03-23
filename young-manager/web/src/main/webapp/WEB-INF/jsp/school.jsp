@@ -20,25 +20,23 @@
 </head>
 <body>
 
-    <div class="header">
-        <div class="layui-header g-title">
+    <div class="layui-carousel" id="bg-item">
+        <div class="layui-header title">
             <div class="layui-container">
                 <div class="layui-logo layui-pull-left">
                     <img src="img/frontpagelogo.png" width="360px">
                 </div>
 
                 <div class="personalCenter layui-pull-right">
-                   <a class="operation" href="index" target="_blank" style="color:#fff"><i class="layui-icon layui-icon-read"></i>&nbsp;回首页</a></a>
+                    <a class="operation"><a class="operation" href="index" target="_blank" style="color:#fff"><i class="layui-icon layui-icon-read"></i>&nbsp;回首页</a></a>
                 </div>
 
                 <div class="personalCenter layui-pull-right">
-                    <a class="operation" href="school" target="_blank" style="color:#fff"><i class="layui-icon layui-icon-read"></i>&nbsp;院校</a></a>
+                    <a class="operation"><a class="operation" href="school" target="_blank" style="color:#fff"><i class="layui-icon layui-icon-read"></i>&nbsp;院校</a></a>
                 </div>
             </div>
         </div>
-
     </div>
-
     <br><br><br><br>
 
     <div class="layui-container layui-pull-center" style="margin-bottom: 30px;width: 1240px;">

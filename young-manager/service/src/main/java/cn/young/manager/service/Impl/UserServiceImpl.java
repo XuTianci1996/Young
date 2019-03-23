@@ -85,4 +85,9 @@ public class UserServiceImpl implements UserService {
     public User getUnameAndUimage(int uid) {
         return userMapper.getUnameAndUimage(uid);
     }
+
+    @Override
+    public int validationInfo(User user){
+        return userMapper.validationInfo(user);
+    }
 }

@@ -314,4 +314,17 @@
     <select id="getUnameAndUimage" resultType="cn.young.manager.pojo.User">
     select uname, uimage from user where uid = #{uid}
   </select>
+
+  <update id="validationInfo" parameterType="cn.young.manager.pojo.User">
+      UPDATE user
+      SET school=#{school},
+        stu_number=#{stuNumber},
+        stu_name=#{stuName},
+        telephone=#{telephone},
+        email=#{email},
+        sex=#{sex}
+        WHERE
+            uid = #{uid}
+</update>
+
 </mapper>

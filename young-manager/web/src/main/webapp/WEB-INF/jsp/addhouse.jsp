@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+         pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>添加房屋信息</title>
+    <title>验证信息</title>
     <link rel="stylesheet" href="layui/css/layui.css">
 </head>
 <body>
@@ -14,72 +14,75 @@
     </fieldset>
     <form id="addHouseForm" class="layui-form">
         <div class="layui-form-item">
-            <label class="layui-form-label">认证院校</label>
+            <label class="layui-form-label">学校</label>
             <div class="layui-input-block">
-                <input type="hidden" name="publisher" value="${loginUser.uNickName }">
-                <textarea name="houseDesc" placeholder="请输入内容" class="layui-textarea" required lay-verify="required" ></textarea>
+                <input type="hidden" name="id" value="${loginUser.uid }">
+                <!-- <textarea name="houseDesc" placeholder="请输入内容" class="layui-textarea" required lay-verify="required" ></textarea>-->
+                <input type="text" name="school" required lay-verify="required" placeholder="" autocomplete="off"
+                       class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">姓名</label>
             <div class="layui-input-block">
-                <input type="text" name="houseModel" required lay-verify="required" placeholder=""
+                <input type="text" name="stu_name" required lay-verify="required" placeholder=""
                        autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">学号</label>
             <div class="layui-input-block">
-                <input type="text" name="houseArea" required lay-verify="required" placeholder=""
+                <input type="text" name="stu_number" required lay-verify="required" placeholder=""
                        autocomplete="off" class="layui-input">
             </div>
         </div>
-        <div class="layui-form-item">
+        <!--<div class="layui-form-item">
             <label class="layui-form-label">哈哈哈哈</label>
             <div class="layui-input-block">
                 <input type="text" name="houseFloor" required lay-verify="required" placeholder="   "
                        autocomplete="off" class="layui-input">
             </div>
-        </div>
+        </div>-->
         <div class="layui-form-item">
             <label class="layui-form-label">性别</label>
             <div class="layui-input-block">
-                <select name="houseType" lay-verify="required">
+                <select name="sex" lay-verify="required">
                     <option value=""></option>
-                    <option value="男">男</option>
-                    <option value="女">女</option>
+                    <option  value="0">保密</option>
+                    <option value="1">女</option>
+                    <option value="2">男</option>
                 </select>
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">地&emsp;&emsp;址</label>
+            <label class="layui-form-label">邮箱</label>
             <div class="layui-input-block">
-                <input type="text" name="houseAddress" required lay-verify="required" placeholder=""
+                <input type="text" name="email" required lay-verify="required" placeholder=""
                        autocomplete="off" class="layui-input">
             </div>
         </div>
-        <div class="layui-form-item">
+        <!-- <div class="layui-form-item">
             <label class="layui-form-label">小区名字</label>
             <div class="layui-input-block">
                 <input type="text" name="communityName" required lay-verify="required" placeholder=""
                        autocomplete="off" class="layui-input">
             </div>
         </div>
-        <div class="layui-form-item">
+       <div class="layui-form-item">
             <label class="layui-form-label">邮箱</label>
             <div class="layui-input-block">
                 <input type="text" name="housePrice" required lay-verify="required|number" placeholder=""
                        autocomplete="off" class="layui-input">
             </div>
-        </div>
+        </div>-->
         <div class="layui-form-item">
             <label class="layui-form-label">联系电话</label>
             <div class="layui-input-block">
-                <input type="text" name="houseLinkMan" required lay-verify="required|phone" placeholder=""
+                <input type="text" name="telephone" required lay-verify="required|phone" placeholder=""
                        autocomplete="off" class="layui-input">
             </div>
         </div>
-        <div class="layui-form-item">
+        <!-- <div class="layui-form-item">
             <label class="layui-form-label">建议</label>
             <div class="layui-input-block">
                 <select name="houseOriented" lay-verify="required">
@@ -99,7 +102,7 @@
                 <img id="simpleImg" width="60px" height="60px">
             </div>
         </div>
-        
+
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
             <legend>上传多张详细图片</legend>
         </fieldset>
@@ -120,7 +123,7 @@
                     </table>
                 </div>
             </div>
-        </div>
+        </div>-->
         <hr>
         <div class="layui-form-item">
             <div class="layui-input-block">
@@ -138,21 +141,21 @@
             layer = layui.layer,
             upload = layui.upload,
             $ = layui.jquery;
-		
+
         upload.render({
             elem:"#SingleUpload",
             url:"/HouseRentalSystem/singleUpload",
             done: function(res, index, upload){
                 //假设code=0代表上传成功
                 if(res.code == 0){
-                  layer.msg("文件异步加载成功！",{icon:1});
-                  $("#simpleImg").attr("src",res.image);
-                  $("#SingleUpload").addClass("layui-btn-disabled");
-                  $("#SingleUpload").off("click");
+                    layer.msg("文件异步加载成功！",{icon:1});
+                    $("#simpleImg").attr("src",res.image);
+                    $("#SingleUpload").addClass("layui-btn-disabled");
+                    $("#SingleUpload").off("click");
                 }
             }
         });
-        
+
         var demoListView = $('#detailsList')
             ,uploadListIns = upload.render({
             elem: '#MultipleUpload'
@@ -207,15 +210,15 @@
                 tds.eq(3).find('.demo-reload').removeClass('layui-hide'); //显示重传
             }
         });
-        
+
         form.on("submit(addHouseRecord)",function(data){
-        	$.post("addHouseRecord",$("#addHouseForm").serialize(),function(res){
-        		if(res=="OK"){
-        			 layer.msg("添加房源信息成功！",{icon:1,end:function(){window.location.href="addHouse";}});
-                     $("#addHouseForm")[0].reset();
-        		}
-        	})
-        	return false;
+            $.post("addHouseRecord",$("#addHouseForm").serialize(),function(res){
+                if(res=="OK"){
+                    layer.msg("验证个人信息信息成功！",{icon:1,end:function(){window.location.href="addhouse";}});
+                    $("#addHouseForm")[0].reset();
+                }
+            })
+            return false;
         });
     });
 </script>
