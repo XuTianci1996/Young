@@ -4,6 +4,7 @@ import cn.young.manager.pojo.Course;
 import cn.young.manager.pojo.CourseExample;
 import java.util.List;
 
+import cn.young.manager.pojo.CourseSelected;
 import cn.young.manager.pojo.Page;
 import org.apache.ibatis.annotations.Param;
 
@@ -66,4 +67,16 @@ public interface CourseMapper {
      * @return
      */
     Course getCourseByCid(@Param("cid")  int cid);
+
+    /**
+     * 获取推荐课程
+     * @return
+     */
+    List<Course> getRecommendCourse();
+
+    List<Course> findAllHotCourse();
+
+
+    Course selectCourseName(Course course);
+
 }

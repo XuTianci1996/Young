@@ -122,4 +122,19 @@ public class CourseImpl implements CourseService {
         pagingData.setCount(total);
         return pagingData;
     }
+
+    @Override
+    public List<Course> findAllHotCourse() {
+        return courseMapper.findAllHotCourse();
+    }
+
+    /**
+     * 首页推荐课程
+     *
+     * @return
+     */
+    @Override
+    public List<Course> getRecommendCourse() {
+        return courseMapper.getRecommendCourse();
+    }
 }

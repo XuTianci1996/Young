@@ -2,6 +2,8 @@ package cn.young.manager.service;
 
 import cn.young.common.pojo.EasyUIDataGrid;
 import cn.young.common.pojo.YoungResult;
+import cn.young.manager.pojo.Course;
+import cn.young.manager.pojo.CourseSelected;
 import cn.young.manager.pojo.User;
 
 
@@ -49,4 +51,5 @@ public interface UserService {
      * 验证信息
      */
     int validationInfo(User user);
+
 }

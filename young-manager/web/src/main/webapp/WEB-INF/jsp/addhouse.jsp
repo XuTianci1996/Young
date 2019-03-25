@@ -18,21 +18,21 @@
             <div class="layui-input-block">
                 <input type="hidden" name="id" value="${loginUser.uid }">
                 <!-- <textarea name="houseDesc" placeholder="请输入内容" class="layui-textarea" required lay-verify="required" ></textarea>-->
-                <input type="text" name="school" required lay-verify="required" placeholder="" autocomplete="off"
-                       class="layui-input">
+                <input type="text" name="school" required lay-verify="required" value="${loginUser.school }" placeholder="" autocomplete="off"
+                class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">姓名</label>
             <div class="layui-input-block">
-                <input type="text" name="stu_name" required lay-verify="required" placeholder=""
+                <input type="text" value="${loginUser.stuName}" name="stu_name" required lay-verify="required" placeholder=""
                        autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">学号</label>
             <div class="layui-input-block">
-                <input type="text" name="stu_number" required lay-verify="required" placeholder=""
+                <input type="text" name="stu_number" value="${loginUser.stuNumber}" required lay-verify="required" placeholder=""
                        autocomplete="off" class="layui-input">
             </div>
         </div>
@@ -46,9 +46,9 @@
         <div class="layui-form-item">
             <label class="layui-form-label">性别</label>
             <div class="layui-input-block">
-                <select name="sex" lay-verify="required">
-                    <option value=""></option>
-                    <option  value="0">保密</option>
+                <select name="sex"  lay-verify="required">
+                    <option value="${loginUser.sex}"></option>
+                    <option  value="0" selected>保密</option>
                     <option value="1">女</option>
                     <option value="2">男</option>
                 </select>
@@ -57,73 +57,19 @@
         <div class="layui-form-item">
             <label class="layui-form-label">邮箱</label>
             <div class="layui-input-block">
-                <input type="text" name="email" required lay-verify="required" placeholder=""
-                       autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <!-- <div class="layui-form-item">
-            <label class="layui-form-label">小区名字</label>
-            <div class="layui-input-block">
-                <input type="text" name="communityName" required lay-verify="required" placeholder=""
-                       autocomplete="off" class="layui-input">
-            </div>
-        </div>
-       <div class="layui-form-item">
-            <label class="layui-form-label">邮箱</label>
-            <div class="layui-input-block">
-                <input type="text" name="housePrice" required lay-verify="required|number" placeholder=""
-                       autocomplete="off" class="layui-input">
-            </div>
-        </div>-->
-        <div class="layui-form-item">
-            <label class="layui-form-label">联系电话</label>
-            <div class="layui-input-block">
-                <input type="text" name="telephone" required lay-verify="required|phone" placeholder=""
-                       autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <!-- <div class="layui-form-item">
-            <label class="layui-form-label">建议</label>
-            <div class="layui-input-block">
-                <select name="houseOriented" lay-verify="required">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-            </div>
-        </div>
-        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
-            <legend>上传简介图片</legend>
-        </fieldset>
-        <div class="layui-form-item">
-            <label class="layui-form-label">简介图片</label>
-            <div class="layui-upload layui-input-block">
-                <button type="button" class="layui-btn layui-btn-primary" id="SingleUpload">上传图片</button>
-                <img id="simpleImg" width="60px" height="60px">
+                <input type="text" name="email" value="${loginUser.email}" required lay-verify="required" placeholder=""
+                autocomplete="off" class="layui-input">
             </div>
         </div>
 
-        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
-            <legend>上传多张详细图片</legend>
-        </fieldset>
         <div class="layui-form-item">
-            <label class="layui-form-label">详细图片</label>
-            <div class="layui-upload layui-input-block">
-                <button type="button" class="layui-btn layui-btn-primary" id="MultipleUpload">选择详细图片</button>
-                <button type="button" class="layui-btn" id="testListAction">开始上传</button>
-                <div class="layui-upload-list">
-                    <table class="layui-table">
-                        <thead>
-                        <tr><th>文件名</th>
-                            <th>大小</th>
-                            <th>状态</th>
-                            <th>操作</th>
-                        </tr></thead>
-                        <tbody id="detailsList"></tbody>
-                    </table>
-                </div>
+            <label class="layui-form-label">联系电话</label>
+            <div class="layui-input-block">
+                <input type="text" name="telephone" value="${loginUser.telephone}" required lay-verify="required|phone" placeholder=""
+                autocomplete="off" class="layui-input">
             </div>
-        </div>-->
+        </div>
+
         <hr>
         <div class="layui-form-item">
             <div class="layui-input-block">
@@ -214,7 +160,7 @@
         form.on("submit(addHouseRecord)",function(data){
             $.post("addHouseRecord",$("#addHouseForm").serialize(),function(res){
                 if(res=="OK"){
-                    layer.msg("验证个人信息信息成功！",{icon:1,end:function(){window.location.href="addhouse";}});
+                    layer.msg("验证个人信息信息成功！",{icon:1,end:function(){window.location.href="addHouse";}});
                     $("#addHouseForm")[0].reset();
                 }
             })

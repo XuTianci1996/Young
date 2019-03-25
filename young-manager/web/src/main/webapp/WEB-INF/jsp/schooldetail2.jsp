@@ -85,12 +85,12 @@
                     <ul>
                         <c:forEach items="${courses}" var="c">
                             <li>
+                                <a href="coursedetails?cid=${c.cid}">
                                 <div class="img">
-                                    <img src="${c.courseImage}" alt="">
-
+                                    <img src="${c.courseImage}" alt="" href="coursedetails?cid=${c.cid}">
                                 </div>
                                 <div class="status">
-                                    <p><span>${c.courseName}</span><span class="icon"></span></p>
+                                    <p ><a href="coursedetails?cid=${c.cid}"><span>${c.courseName}</span><span class="icon"></span></a></p>
                                     <p><span class="planing">正在开课</span><span><img src="" alt="">已选人数：${c.courseSelectnum}</span></p>
                                 </div>
                                 <div class="person">
@@ -113,27 +113,27 @@
     <div class="page_min">
         <ul>
             <c:if test="${page>1}">
-                <li style="margin-right: 10px;"><a href="http://localhost:8080/schooldetail2?page=${page-1}&limit=40" class="next">上一页</a></li>
+                <li style="margin-right: 10px;"><a href="${pageContext.request.contextPath}/schooldetail2?page=${page-1}&limit=40" class="next">上一页</a></li>
 
             </c:if>
 
-            <li class="" id="list1"><a  href="http://localhost:8080/schooldetail2?page=1&limit=40">1</a></li>
-            <li class="" id="list2"><a  href="http://localhost:8080/schooldetail2?page=2&limit=40">2</a></li>
-            <li class="" id="list3"><a  href="http://localhost:8080/schooldetail2?page=3&limit=40">3</a></li>
-            <li class="" id="list4"><a  href="http://localhost:8080/schooldetail2?page=4&limit=40">4</a></li>
-            <li class="" id="list5"><a  href="http://localhost:8080/schooldetail2?page=5&limit=40">5</a></li>
-            <li class="" id="list6"><a  href="http://localhost:8080/schooldetail2?page=6&limit=40">6</a></li>
-            <li class="" id="list7"><a  href="http://localhost:8080/schooldetail2?page=7&limit=40">7</a></li>
-            <li class="" id="list8"><a  href="http://localhost:8080/schooldetail2?page=8&limit=40">8</a></li>
-            <li class="" id="list9"><a  href="http://localhost:8080/schooldetail2?page=9&limit=40">9</a></li>
-            <li class="" id="list10"><a  href="http://localhost:8080/schooldetail2?page=10&limit=40">10</a></li>
-            <li class="" id="list11"><a  href="http://localhost:8080/schooldetail2?page=11&limit=40">11</a></li>
-            <li class="" id="list12"><a  href="http://localhost:8080/schooldetail2?page=12&limit=40">12</a></li>
-            <li class="" id="list13"><a  href="http://localhost:8080/schooldetail2?page=13&limit=40">13</a></li>
-            <li class="" id="list14"><a  href="http://localhost:8080/schooldetail2?page=14&limit=40">14</a></li>
+            <li class="" id="list1"><a  href="${pageContext.request.contextPath}/schooldetail2?page=1&limit=40">1</a></li>
+            <li class="" id="list2"><a  href="${pageContext.request.contextPath}/schooldetail2?page=2&limit=40">2</a></li>
+            <li class="" id="list3"><a  href="${pageContext.request.contextPath}/schooldetail2?page=3&limit=40">3</a></li>
+            <li class="" id="list4"><a  href="${pageContext.request.contextPath}/schooldetail2?page=4&limit=40">4</a></li>
+            <li class="" id="list5"><a  href="${pageContext.request.contextPath}/schooldetail2?page=5&limit=40">5</a></li>
+            <li class="" id="list6"><a  href="${pageContext.request.contextPath}/schooldetail2?page=6&limit=40">6</a></li>
+            <li class="" id="list7"><a  href="${pageContext.request.contextPath}/schooldetail2?page=7&limit=40">7</a></li>
+            <li class="" id="list8"><a  href="${pageContext.request.contextPath}/schooldetail2?page=8&limit=40">8</a></li>
+            <li class="" id="list9"><a  href="${pageContext.request.contextPath}/schooldetail2?page=9&limit=40">9</a></li>
+            <li class="" id="list10"><a  href="${pageContext.request.contextPath}/schooldetail2?page=10&limit=40">10</a></li>
+            <li class="" id="list11"><a  href="${pageContext.request.contextPath}/schooldetail2?page=11&limit=40">11</a></li>
+            <li class="" id="list12"><a  href="${pageContext.request.contextPath}/schooldetail2?page=12&limit=40">12</a></li>
+            <li class="" id="list13"><a  href="${pageContext.request.contextPath}/schooldetail2?page=13&limit=40">13</a></li>
+            <li class="" id="list14"><a  href="${pageContext.request.contextPath}/schooldetail2?page=14&limit=40">14</a></li>
 
             <c:if test="${page<14}">
-                <li style="margin-right: 10px;"><a href="http://localhost:8080/schooldetail2?page=${page+1}&limit=40" class="next">下一页</a></li>
+                <li style="margin-right: 10px;"><a href="${pageContext.request.contextPath}/schooldetail2?page=${page+1}&limit=40" class="next">下一页</a></li>
 
             </c:if>
         </ul>

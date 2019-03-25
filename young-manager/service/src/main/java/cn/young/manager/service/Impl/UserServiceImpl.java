@@ -2,6 +2,9 @@ package cn.young.manager.service.Impl;
 
 import cn.young.common.pojo.EasyUIDataGrid;
 import cn.young.common.pojo.YoungResult;
+import cn.young.manager.pojo.Course;
+import cn.young.manager.pojo.CourseSelected;
+import cn.young.mapper.CourseMapper;
 import cn.young.mapper.UserMapper;
 import cn.young.manager.pojo.User;
 import cn.young.manager.pojo.UserExample;
@@ -21,11 +24,12 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private CourseMapper courseMapper;
+
     @Override
     public User login(User user) {
-        System.out.println("login:"+user.getPassword());
         String password = DigestUtils.md5DigestAsHex(user.getPassword().getBytes());
-        System.out.println(password);
         user.setPassword(password);
         return userMapper.login(user);
     }
@@ -90,4 +94,7 @@ public class UserServiceImpl implements UserService {
     public int validationInfo(User user){
         return userMapper.validationInfo(user);
     }
+
+
+
 }

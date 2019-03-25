@@ -43,4 +43,13 @@ public interface CourseService {
      * @return
      */
     PagingData<Course> getMyCourseByUid(int uid, int page, int limit);
+
+    List<Course> findAllHotCourse();
+
+    /**
+     * 首页推荐课程
+     * @return
+     */
+    List<Course> getRecommendCourse();
+
 }

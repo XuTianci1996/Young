@@ -334,4 +334,44 @@
         from course
         where cid = #{cid}
     </select>
+
+  <!-- 推荐课程查询 -->
+  <select id="getRecommendCourse" resultMap="BaseResultMap">
+        SELECT *
+        FROM course
+        WHERE cid IN(
+            SELECT MAX(course.cid)
+            FROM(
+                    SELECT *
+                    FROM evaluation
+                    ORDER BY average_mark * total DESC LIMIT 8
+                ) AS t1, course
+            WHERE t1.course_code = course.course_code
+            GROUP BY t1.course_code
+        );
+    </select>
+
+  <!--<select id="findAllHotCourse" resultMap="BaseResultMap">-->
+  <!--SELECT  *-->
+  <!--FROM course-->
+  <!--ORDER BY course_selectnum-->
+  <!--DESC limit 8-->
+  <!--</select>-->
+  <select id="findAllHotCourse" resultMap="BaseResultMap">
+ SELECT * FROM course WHERE cid IN (
+	SELECT t.cid FROM(
+		SELECT course.`cid` FROM (
+			SELECT course_code,MAX(cid) AS maxcid
+			FROM course
+			GROUP BY course_code) AS t1, course
+		WHERE t1.maxcid=course.cid
+		GROUP BY cid
+		ORDER BY course.`course_selectnum` DESC LIMIT 8)AS t);
+  </select>
+
+
+  <select id="selectCourseName" resultMap="BaseResultMap" parameterType="cn.young.manager.pojo.Course">
+        select course_name from course WHERE course_code=#{courseCode}
+    </select>
+
 </mapper>

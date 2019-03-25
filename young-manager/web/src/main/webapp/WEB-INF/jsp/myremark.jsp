@@ -36,6 +36,10 @@
                 {field: 'content_date', title: '评价时间', align: 'center'},
                 {title: '操作', align: 'center',toolbar:"#tools",width:190}
             ]],
+            initSort: {
+                field: 'cid' //排序字段，对应 cols 设定的各字段名
+                ,type: 'asc' //排序方式  asc: 升序、desc: 降序、null: 默认排序
+            }
         });
         
         table.on('tool(remark)',function(obj){

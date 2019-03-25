@@ -143,4 +143,5 @@ public interface CourseSelectedMapper {
      * @return
      */
     List<Integer> getAllMarkByCourse_code(@Param("courseCode") String courseCode);
+
 }

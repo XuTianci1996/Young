@@ -112,4 +112,6 @@ public class CourseDetailsController {
 
         return "0";
     }
+
+
 }

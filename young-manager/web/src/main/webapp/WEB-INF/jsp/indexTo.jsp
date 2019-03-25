@@ -360,8 +360,8 @@
         <div class="detail">
             <div class="items">
                 <%--<div class="left">合作院校</div>--%>
-                <div class="item"><a href="http://localhost:8080/schooldetail1?page=1&limit=20"><img src="img/dnxiaohui.png" alt=""></a></div>
-                <div class="item"><a href="http://localhost:8080/schooldetail2?page=1&limit=40"><img src="img/zkdxiaohui.png" alt=""></a></div>
+                <div class="item"><a href="${pageContext.request.contextPath}/schooldetail1?page=1&limit=20"><img src="img/dnxiaohui.png" alt=""></a></div>
+                <div class="item"><a href="${pageContext.request.contextPath}/schooldetail2?page=1&limit=40"><img src="img/zkdxiaohui.png" alt=""></a></div>
                 <div class="item"><a href=""><img src="img/kongbai.png" alt=""></a></div>
                 <div class="item"><a href=""><img src="img/kongbai.png" alt=""></a></div>
                 <div class="item"><a href=""><img src="img/kongbai.png" alt=""></a></div>

@@ -137,13 +137,14 @@
 }
 .house-model{
     width: 100%;
-    height: 100px;
+    height: auto;
 }
 .house-model ul li{
     width: 100%;
-    height: 100px;
+    height: auto;
     text-align: left;
     padding-top: 20px;
+    padding-bottom: 20px;
     box-sizing: border-box;
     float: left;
 }

@@ -254,7 +254,7 @@
   <!--id是接口中的方法名，结果类型如没有在mybatis.xml文件中配置别名，则resultType必须使用全名称（包名+类名） -->
   <!--带走/取出什么-->
   <!-- 章海翔 -->
-  <select id="getAllRemarkByCourse_code" resultType="cn.young.manager.pojo.CourseSelected">
+  <select id="getAllRemarkByCourse_code"  resultMap="BaseResultMap">
     select
       uid, mark, content, content_date
     from course_selected
@@ -331,7 +331,7 @@
     </select>
 
   <!--已选课程的评价信息-->
-  <select id="getLimitedRemarkByUid" resultType="cn.young.manager.pojo.CourseSelected">
+  <select id="getLimitedRemarkByUid" resultMap="BaseResultMap">
         select cid, course_code, mark, content, content_date
         from course_selected
         where uid = #{uid}
@@ -363,5 +363,6 @@
         from course_selected
         where course_code = #{courseCode}
     </select>
+
 
 </mapper>

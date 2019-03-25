@@ -74,7 +74,8 @@ public class CourseSelectedServiceImpl implements CourseSelectedService {
             myRemark.setCourseName(course.getCourseName());
             myRemark.setSchName(course.getSchName());
             myRemark.setContent_date(remark.getContentDate());
-
+            System.out.println(myRemark.getContent_date());
+            System.out.println(remark.getContentDate());
             myRemarkList.add(myRemark);
         }
 
@@ -208,4 +209,20 @@ public class CourseSelectedServiceImpl implements CourseSelectedService {
         return courseSelectedMapper.hasChoosed(cid, uid);
     }
 
+    @Override
+    public CourseSelected[] getInfo(){
+        CourseSelectedExample courseExample = new CourseSelectedExample();
+        List<CourseSelected> courseList = courseSelectedMapper.selectByExampleWithBLOBs(courseExample);
+        CourseSelected[] courseSelected = new CourseSelected[courseList.size()];
+        System.out.println(courseList.size());
+        CourseSelected[] arr = courseList.toArray(courseSelected);
+        for (CourseSelected cd :arr){
+            System.out.println(cd.getUid());
+        }
+        return courseList.toArray(courseSelected);
+    }
+    @Override
+    public Course selectCourseName(Course course) {
+        return courseMapper.selectCourseName(course);
+    }
 }

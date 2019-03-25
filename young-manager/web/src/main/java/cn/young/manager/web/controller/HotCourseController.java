@@ -1,7 +1,8 @@
 package cn.young.manager.web.controller;
 
+import cn.young.manager.pojo.Course;
 import cn.young.manager.pojo.HotCourse;
-import cn.young.manager.service.HotCourseService;
+import cn.young.manager.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,18 +14,23 @@ import java.util.List;
 @Controller
 public class HotCourseController {
     @Autowired
-    private HotCourseService service;
-    @RequestMapping("/toIndexPage")
-    public String toIndexPage(HttpServletRequest request) {
-        List<HotCourse> findHotCourse = service.findAllHotCourse();
-        request.getSession().setAttribute("HotCourse",findHotCourse );
-        return "index";
-    }
+    private CourseService service;
 
-    @RequestMapping("/")
-    public String toIndex(HttpServletRequest request) {
-        List<HotCourse> findHotCourse = service.findAllHotCourse();
+    /**
+     * To:袁双双：
+     *      我把你的两个方法合并了，因为我看方法体里的东西都一样。里面还加了推荐课程的代码，如果修改的话不要把我的覆盖掉哦
+     *       ——章海翔
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = {"/toIndexPage", "/"})
+    public String toIndexPage(HttpServletRequest request) {
+        List<Course> findHotCourse = service.findAllHotCourse();
+        List<Course> recommendCourse = service.getRecommendCourse();
+
         request.getSession().setAttribute("HotCourse",findHotCourse );
+        request.getSession().setAttribute("RecommendCourse",recommendCourse );
+
         return "index";
     }
     /**
@@ -32,10 +38,13 @@ public class HotCourseController {
      * @param page
      * @return
      */
-    @RequestMapping("{page}")
+    @RequestMapping("/{page}")
     public String getPage(@PathVariable String page, HttpServletRequest request){
-        List<HotCourse> findHotCourse = service.findAllHotCourse();
+        List<Course> findHotCourse = service.findAllHotCourse();
+        List<Course> recommendCourse = service.getRecommendCourse();
+
         request.getSession().setAttribute("HotCourse",findHotCourse );
+        request.getSession().setAttribute("RecommendCourse",recommendCourse );
         return page;
     }
 //    @RequestMapping("/toDetailsPage")

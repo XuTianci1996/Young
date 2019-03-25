@@ -18,7 +18,7 @@
     <script src="layui/layui.js"></script>
     <script src="js/html5shiv.min.js" type="text/javascript"></script>
     <script src="js/selectivizr.min.js" type="text/javascript"></script>
-    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $("#list${page}").addClass("active");
@@ -88,13 +88,14 @@
                         <ul>
                             <c:forEach items="${courses}" var="c">
                                 <li>
+                                   <a href="coursedetails?cid=${c.cid}">
                                     <div class="img">
-                                        <img src="${c.courseImage}" alt="">
+                                        <img src="${c.courseImage}" alt="" >
 
                                     </div>
                                     <div class="status">
-                                        <p><span>${c.courseName}</span><span class="icon"></span></p>
-                                        <p><span class="planing">正在开课</span><span><img src="" alt="">已选人数：${c.courseSelectnum}</span></p>
+                                        <p ><a href="coursedetails?cid=${c.cid}"><span>${c.courseName}</span><span class="icon"></span></a></p>
+                                        <p ><span class="planng">正在开课</span><span><img src="" alt="">已选人数：${c.courseSelectnum}</span></p>
                                     </div>
                                     <div class="person">
                                         <span><img src=""alt=""></span>
@@ -119,20 +120,20 @@
 
                 <%--第一页之后都有上一页--%>
                 <c:if test="${page>1}">
-                    <li style="margin-right: 10px;"><a href="http://localhost:8080/schooldetail1?page=${page-1}&limit=20" class="next">上一页</a></li>
+                    <li style="margin-right: 10px;"><a href="${pageContext.request.contextPath}/schooldetail1?page=${page-1}&limit=20" class="next">上一页</a></li>
 
                 </c:if>
 
-                <li class="" id="list1"><a  href="http://localhost:8080/schooldetail1?page=1&limit=20" id="h1">1</a></li>
-                <li class="" id="list2"><a  href="http://localhost:8080/schooldetail1?page=2&limit=20">2</a></li>
-                <li class="" id="list3"><a  href="http://localhost:8080/schooldetail1?page=3&limit=20">3</a></li>
-                <li class="" id="list4"><a  href="http://localhost:8080/schooldetail1?page=4&limit=20">4</a></li>
-                <li class="" id="list5"><a  href="http://localhost:8080/schooldetail1?page=5&limit=20">5</a></li>
-                <li class="" id="list6"><a  href="http://localhost:8080/schooldetail1?page=6&limit=20">6</a></li>
+                <li class="" id="list1"><a  href="${pageContext.request.contextPath}/schooldetail1?page=1&limit=20" id="h1">1</a></li>
+                <li class="" id="list2"><a  href="${pageContext.request.contextPath}/schooldetail1?page=2&limit=20">2</a></li>
+                <li class="" id="list3"><a  href="${pageContext.request.contextPath}/schooldetail1?page=3&limit=20">3</a></li>
+                <li class="" id="list4"><a  href="${pageContext.request.contextPath}/schooldetail1?page=4&limit=20">4</a></li>
+                <li class="" id="list5"><a  href="${pageContext.request.contextPath}/schooldetail1?page=5&limit=20">5</a></li>
+                <li class="" id="list6"><a  href="${pageContext.request.contextPath}/schooldetail1?page=6&limit=20">6</a></li>
 
                 <%--第六页之前都有下一页--%>
                 <c:if test="${page<6}">
-                    <li style="margin-right: 10px;"><a href="http://localhost:8080/schooldetail1?page=${page+1}&limit=20" class="next" >下一页</a></li>
+                    <li style="margin-right: 10px;"><a href="${pageContext.request.contextPath}/schooldetail1?page=${page+1}&limit=20" class="next" >下一页</a></li>
 
                 </c:if>
             </ul>

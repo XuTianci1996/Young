@@ -5,28 +5,106 @@
       <artifact name="web:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/HotCourseController.java" line="16" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="12b0aaa0-859d-4e64-8a9f-770558c55a80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/RecommendController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/indexTo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/recommend.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/Login-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course60.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course61.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/course9.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseSelectedMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseSelectedMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseSelectedMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseSelectedMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/interface/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseSelectedService.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseSelectedService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/HotCourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/HotCourseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/young-manager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/interface/src/test/java/service/CourseSelectedServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/interface/src/test/java/service/CourseSelectedServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/CourseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/CourseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/CourseSelectedServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/CourseSelectedServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/HotCourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/HotCourseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/SchoolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/SchoolController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/HotCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/HotCourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/RecommendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/RecommendController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/test/test/cn/young/service/CourseSelectedServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/test/test/cn/young/service/CourseSelectedServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/addhouse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/addhouse.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/adminlogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/adminlogin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/customer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/indexTo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/indexTo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/myremark.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/myremark.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/school.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/school.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail1.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail1.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/young-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/young-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/webapp/css/details.css" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/css/details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/guanli.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/young-manager/web/src/main/webapp/img/guanli.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/young-manager/interface/target/" />
     <ignored path="$PROJECT_DIR$/young-manager/service/target/" />
@@ -46,55 +124,57 @@
     <session id="352374120">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="37" />
+          <entry key="class" value="1" />
+          <entry key="css" value="42" />
           <entry key="dtd" value="2" />
           <entry key="html" value="1" />
-          <entry key="java" value="403" />
-          <entry key="jpg" value="1" />
+          <entry key="java" value="510" />
+          <entry key="jpg" value="2" />
           <entry key="js" value="2" />
-          <entry key="jsp" value="175" />
+          <entry key="jsp" value="210" />
           <entry key="png" value="8" />
           <entry key="properties" value="1" />
           <entry key="ts" value="1" />
-          <entry key="xml" value="85" />
+          <entry key="xml" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="37" />
+          <entry key="CLASS" value="1" />
+          <entry key="CSS" value="42" />
           <entry key="DTD" value="2" />
           <entry key="HTML" value="1" />
-          <entry key="Image" value="9" />
-          <entry key="JAVA" value="403" />
-          <entry key="JSP" value="175" />
+          <entry key="Image" value="10" />
+          <entry key="JAVA" value="510" />
+          <entry key="JSP" value="210" />
           <entry key="JavaScript" value="2" />
           <entry key="Properties" value="1" />
           <entry key="TypeScript" value="1" />
-          <entry key="XML" value="85" />
+          <entry key="XML" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="98" />
+          <entry key="css" value="119" />
           <entry key="dummy" value="6" />
           <entry key="html" value="2" />
-          <entry key="java" value="3992" />
-          <entry key="jsp" value="1872" />
+          <entry key="java" value="4777" />
+          <entry key="jsp" value="2146" />
           <entry key="properties" value="25" />
           <entry key="txt" value="28" />
-          <entry key="xml" value="835" />
+          <entry key="xml" value="914" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="98" />
+          <entry key="CSS" value="119" />
           <entry key="HTML" value="2" />
-          <entry key="JAVA" value="3992" />
-          <entry key="JSP" value="1872" />
+          <entry key="JAVA" value="4777" />
+          <entry key="JSP" value="2146" />
           <entry key="PLAIN_TEXT" value="34" />
           <entry key="Properties" value="25" />
-          <entry key="SQL" value="37" />
-          <entry key="XML" value="798" />
+          <entry key="SQL" value="40" />
+          <entry key="XML" value="874" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -112,10 +192,62 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/CourseSelected.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-761">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="e#1078#1079#0" expanded="true" />
+                <element signature="e#1112#1113#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/RecommendController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="564">
+              <caret line="90" column="36" lean-forward="true" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/recommend.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/customer.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/myremark.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-111">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/addhouse.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5400">
-              <caret line="216" column="97" selection-start-line="216" selection-start-column="97" selection-end-line="216" selection-end-column="97" />
+            <state relative-caret-position="-2500">
+              <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#legend#0;n#fieldset#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -127,86 +259,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/UserController.java">
+        <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/coursedetails.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="134" column="40" lean-forward="true" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/SchoolController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/myremark.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/customer.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="39" column="75" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="67" column="50" lean-forward="true" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/RecommendController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#923#953#0" expanded="true" />
-                <element signature="e#1024#1054#0" expanded="true" />
-                <element signature="e#797#814#0" expanded="true" />
-                <element signature="e#1866#1882#0" expanded="true" />
-                <element signature="e#2796#2826#0" expanded="true" />
-                <element signature="e#2569#2586#0" expanded="true" />
-                <element signature="e#4516#4532#0" expanded="true" />
-                <element signature="e#5732#5759#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail1.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="126" column="59" selection-start-line="126" selection-start-column="59" selection-end-line="126" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/UserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="321" column="26" selection-start-line="321" selection-start-column="26" selection-end-line="321" selection-end-column="26" />
+            <state relative-caret-position="375">
+              <caret line="225" column="90" lean-forward="true" selection-start-line="225" selection-start-column="20" selection-end-line="225" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -214,8 +270,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="26" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="26" />
+            <state relative-caret-position="125">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -226,26 +282,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>BaseResultMap</find>
-      <find>registSubmit</find>
-      <find>signout</find>
-      <find>sign</find>
-      <find>insert</find>
-      <find>登录</find>
-      <find>system</find>
-      <find>sys</find>
-      <find>image</find>
-      <find>s-school</find>
-      <find>img</find>
-      <find>s-title</find>
-      <find>.s-school</find>
       <find>.s-school .title</find>
       <find>title</find>
       <find>selectByExample</find>
@@ -263,6 +306,19 @@
       <find>hot-cporde</find>
       <find>没有</find>
       <find>addHouseForm</find>
+      <find>HotCourse</find>
+      <find>getLimitedRemarkByUid</find>
+      <find>order-btn-container</find>
+      <find>details-info</find>
+      <find>guanli</find>
+      <find>contentDate</find>
+      <find>find</find>
+      <find>Sys</find>
+      <find>localho</find>
+      <find>house-model</find>
+      <find>localhost:</find>
+      <find>local</find>
+      <find>System.out</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -270,6 +326,9 @@
     <dirStrings>
       <dir>E:\Young\young-manager</dir>
       <dir>E:\Young\young-common</dir>
+      <dir>E:\Young\young-manager\web\src\main\webapp\WEB-INF\jsp</dir>
+      <dir>E:\Young\young-manager\service</dir>
+      <dir>E:\Young\young-manager\web</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -283,57 +342,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseAndSchoolMapper.xml" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/test.jsp" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/layui/css/layui.css" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetails.jsp" />
-        <option value="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/SchoolService.java" />
-        <option value="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/SchoolServiceImpl.java" />
-        <option value="$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/Evaluation.java" />
-        <option value="$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/UserRemark.java" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CookieUtils.java" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/user-list.jsp" />
         <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/admin.jsp" />
         <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail.jsp" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/HotCourseController.java" />
         <option value="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/school.jsp" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail1.jsp" />
-        <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.java" />
-        <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.xml" />
-        <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseSelectedMapper.java" />
-        <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseSelectedMapper.xml" />
         <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/EvaluationMapper.java" />
         <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/EvaluationMapper.xml" />
         <option value="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/EvaluationService.java" />
-        <option value="$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/CourseSelected.java" />
-        <option value="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/CourseImpl.java" />
         <option value="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/EvaluationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseService.java" />
-        <option value="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseSelectedService.java" />
-        <option value="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/CourseSelectedServiceImpl.java" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/coursedetails.jsp" />
         <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/myorder.jsp" />
         <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/myrental.jsp" />
         <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/welcome.jsp" />
         <option value="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseController.java" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/indexTo.jsp" />
         <option value="$PROJECT_DIR$/young-parent/pom.xml" />
         <option value="$PROJECT_DIR$/young-manager/web/src/main/resources/db.properties" />
         <option value="$PROJECT_DIR$/young-manager/pom.xml" />
         <option value="$PROJECT_DIR$/young-common/pom.xml" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail2.jsp" />
         <option value="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/SchoolController.java" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/index.jsp" />
         <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/UserService.java" />
-        <option value="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/UserController.java" />
         <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/addhouse.jsp" />
-        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/customer.jsp" />
+        <option value="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/HotCourseService.java" />
+        <option value="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/HotCourseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/coursedetails.jsp" />
+        <option value="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/CourseImpl.java" />
+        <option value="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseService.java" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/CourseSelected.java" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/school.jsp" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/index.jsp" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail1.jsp" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail2.jsp" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/indexTo.jsp" />
+        <option value="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/UserService.java" />
+        <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.java" />
+        <option value="$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseSelectedService.java" />
+        <option value="$PROJECT_DIR$/young-manager/interface/pom.xml" />
+        <option value="$PROJECT_DIR$/young-manager/interface/src/test/java/service/UserServiceTest.java" />
+        <option value="$PROJECT_DIR$/young-manager/interface/src/test/java/service/CourseSelectedServiceTest.java" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/test/test/cn/young/service/CourseSelectedServiceTest.java" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/updatepwd.jsp" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/HotCourseController.java" />
+        <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseSelectedMapper.xml" />
+        <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseSelectedMapper.java" />
+        <option value="$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/CourseSelectedServiceImpl.java" />
+        <option value="$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.xml" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/adminlogin.jsp" />
         <option value="$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/RecommendController.java" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/recommend.jsp" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/customer.jsp" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/myremark.jsp" />
+        <option value="$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/addhouse.jsp" />
       </list>
     </option>
   </component>
@@ -367,8 +426,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="143" />
-    <option name="y" value="111" />
+    <option name="x" value="149" />
+    <option name="y" value="218" />
     <option name="width" value="1742" />
     <option name="height" value="1047" />
   </component>
@@ -425,6 +484,65 @@
             <path>
               <item name="Young" type="b2602c69:ProjectViewProjectNode" />
               <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
               <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -456,6 +574,46 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Young" type="b2602c69:ProjectViewProjectNode" />
+              <item name="young-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Young" type="b2602c69:ProjectViewProjectNode" />
@@ -534,7 +692,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553349271765" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553509336799" />
     <property name="last_opened_file_path" value="F:/Young" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -543,11 +701,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Young\young-manager\web\src\main\webapp\img" />
+      <recent name="E:\Young\young-manager\web\src\main\webapp\css" />
       <recent name="E:\Young\young-manager\web\src\main\webapp\js" />
       <recent name="E:\Young\young-manager\web\src\main\webapp\WEB-INF\jsp" />
       <recent name="E:\Young\young-manager\web\src\main\test" />
-      <recent name="E:\Young\young-manager\pojo\src\main\java\cn\young\manager\pojo" />
-      <recent name="E:\Young\young-manager\interface\src\test\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.young.manager.web.controller" />
@@ -572,6 +730,22 @@
     </option>
   </component>
   <component name="RunManager" selected="Maven.manager">
+    <configuration name="CourseSelectedServiceTest.Testre" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="interface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.CourseSelectedServiceTest" />
+      <option name="METHOD_NAME" value="Testre" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="manager" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -640,9 +814,11 @@
     <list>
       <item itemvalue="Maven.manager" />
       <item itemvalue="Tomcat Server.index.jsp" />
+      <item itemvalue="JUnit.CourseSelectedServiceTest.Testre" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CourseSelectedServiceTest.Testre" />
         <item itemvalue="Tomcat Server.index.jsp" />
       </list>
     </recent_temporary>
@@ -667,7 +843,7 @@
       <workItem from="1552207244054" duration="15368000" />
       <workItem from="1552266156089" duration="2269000" />
       <workItem from="1552269426176" duration="76607000" />
-      <workItem from="1552961384777" duration="29516000" />
+      <workItem from="1552961384777" duration="60789000" />
     </task>
     <task id="LOCAL-00001" summary="第一个迭代版本">
       <created>1552269967328</created>
@@ -728,8 +904,22 @@
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="CourseSelectedServiceTest_Testre - 2019.03.25 at 09h 45m 45s.xml">
+      <configuration name="CourseSelectedServiceTest.Testre" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CourseSelectedServiceTest_Testre - 2019.03.25 at 09h 52m 19s.xml">
+      <configuration name="CourseSelectedServiceTest.Testre" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CourseSelectedServiceTest_Testre - 2019.03.25 at 09h 57m 27s.xml">
+      <configuration name="CourseSelectedServiceTest.Testre" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CourseSelectedServiceTest_Testre - 2019.03.25 at 09h 58m 09s.xml">
+      <configuration name="CourseSelectedServiceTest.Testre" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149570000" />
+    <option name="totallyTimeSpent" value="180843000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -744,7 +934,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24733475" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24733475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -754,7 +944,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.22559653" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.22559653" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -769,15 +959,50 @@
       <window_info anchor="bottom" id="Application Servers" order="14" weight="0.329718" />
       <window_info anchor="right" id="CDI" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Maven Projects" order="2" weight="0.25692964" />
+      <window_info anchor="right" id="Maven Projects" order="2" weight="0.28624734" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24733475" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.22559653" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.22451194" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3264642" />
+      <window_info anchor="bottom" id="Spring" order="12" weight="0.329718" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.329718" />
+      <window_info anchor="right" id="CDI" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Maven Projects" order="2" weight="0.28624734" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -810,42 +1035,6 @@
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java</url>
-          <line>38</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -854,10 +1043,246 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/EvaluationMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/school.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="56" column="82" selection-start-line="56" selection-start-column="82" selection-end-line="56" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/course-list.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/indexTo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="363" column="77" selection-start-line="363" selection-start-column="77" selection-end-line="363" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/HotCourseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/interface/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/test/java/service/UserServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/test/java/service/EvaluationServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/test/test/cn/young/service/CourseServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/SchoolServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/test/java/service/CourseSelectedServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/test/test/cn/young/service/CourseSelectedServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/updatepwd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="135" column="91" selection-start-line="135" selection-start-column="91" selection-end-line="135" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="231" column="73" selection-start-line="231" selection-start-column="39" selection-end-line="231" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/jsp-api/2.0/jsp-api-2.0.jar!/javax/servlet/jsp/PageContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/RemarkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="59" column="46" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2250">
+          <caret line="101" column="31" lean-forward="true" selection-start-line="101" selection-end-line="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail1.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="129" column="92" lean-forward="true" selection-start-line="129" selection-start-column="92" selection-end-line="129" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/SchoolController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/HotCourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/CourseImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3611#3612#0" expanded="true" />
+            <element signature="e#3665#3666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseSelectedService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseSelectedMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1721">
-          <caret line="144" column="82" selection-start-line="144" selection-start-column="82" selection-end-line="144" selection-end-column="82" />
+        <state relative-caret-position="708">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
           <folding>
             <element signature="docComment;method#updateCourseSelectedToChoose#0;class#CourseSelectedMapper#0" />
             <element signature="docComment;method#insertCourseSelected#0;class#CourseSelectedMapper#0" />
@@ -873,441 +1298,161 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseSelectedMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1993">
-          <caret line="365" selection-start-line="365" selection-end-line="365" />
-          <folding>
-            <element signature="e#10591#10757#0" />
-            <element signature="e#10787#10922#0" />
-          </folding>
+        <state relative-caret-position="697">
+          <caret line="366" selection-start-line="366" selection-end-line="366" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/EvaluationMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/HotCourseMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/EvaluationMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="212" column="11" selection-start-line="212" selection-start-column="11" selection-end-line="212" selection-end-column="11" />
-          <folding>
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" />
-            <element signature="n#update#2;n#mapper#0;n#!!top" />
-            <element signature="n#update#3;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="330" column="17" lean-forward="true" selection-start-line="330" selection-start-column="17" selection-end-line="330" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/test/java/service/CourseSelectedServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/EvaluationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/CourseSelected.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/PagingData.java">
+    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/SchoolMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/CourseImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1021">
-          <caret line="101" column="30" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/MyRemark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/CourseSelectedService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/CourseSelectedServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="439">
+          <caret line="225" selection-start-line="225" selection-end-line="225" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getMyRemarkByCidAndUid#0;class#CourseSelectedServiceImpl#0" />
             <element signature="docComment;method#chooseCourse#0;class#CourseSelectedServiceImpl#0" />
             <element signature="docComment;method#quitCourse#0;class#CourseSelectedServiceImpl#0" />
             <element signature="method#quitCourse#0;class#CourseSelectedServiceImpl#0" />
+            <element signature="e#6759#6760#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/EvaluationServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="67" column="25" lean-forward="true" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        <state relative-caret-position="463">
+          <caret line="373" column="66" selection-start-line="373" selection-start-column="66" selection-end-line="373" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/HotCourseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
           <folding>
-            <element signature="e#1985#1986#0" expanded="true" />
-            <element signature="e#2056#2057#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseDetailsController.java">
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1329">
-          <caret line="45" column="86" selection-start-line="45" selection-start-column="86" selection-end-line="45" selection-end-column="86" />
+        <state relative-caret-position="354">
+          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/HotCourseController.java">
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CookieUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="-671">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/adminlogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/myrental.jsp">
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        <state relative-caret-position="-225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/CourseSelected.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-761">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/coursedetails.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
-          <caret line="301" column="20" selection-start-line="301" selection-start-column="20" selection-end-line="301" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/CourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/indexTo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="156" selection-start-line="156" selection-end-line="156" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/RemarkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1776">
-          <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1212" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/resources/db.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="72" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-451">
-          <caret line="12" column="21" selection-start-line="5" selection-start-column="12" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-parent/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6237" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/school.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="58" column="18" lean-forward="true" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="432" column="6" selection-start-line="432" selection-start-column="6" selection-end-line="432" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#1066#1072#0#HTML" expanded="true" />
-            <element signature="e#1253#1259#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#1498#1504#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#0;n#div#1;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#legend#0;n#fieldset#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#1;n#div#2;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#fieldset#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#3;n#div#2;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#fieldset#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#legend#0;n#fieldset#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#legend#0;n#fieldset#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail2.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#1388#1394#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#1633#1639#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#legend#0;n#fieldset#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#fieldset#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#0;n#fieldset#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2251#2257#0#HTML" expanded="true" />
-            <element signature="e#2257#2263#0#HTML" expanded="true" />
-            <element signature="e#2263#2269#0#HTML" expanded="true" />
-            <element signature="e#2269#2275#0#HTML" expanded="true" />
-            <element signature="e#2275#2281#0#HTML" expanded="true" />
-            <element signature="e#2281#2287#0#HTML" expanded="true" />
-            <element signature="e#2287#2293#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#legend#0;n#fieldset#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#1;n#div#2;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#fieldset#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#15;n#ul#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/js/jquery-3.3.1.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/interface/src/main/java/cn/young/manager/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/service/src/main/java/cn/young/manager/service/Impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-          <folding>
-            <element signature="e#2426#2427#0" expanded="true" />
-            <element signature="e#2482#2483#0" expanded="true" />
-            <element signature="e#2539#2540#0" expanded="true" />
-            <element signature="e#2589#2590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/course-list.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/user-list.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/updatepwd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-675" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/myorder.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2150">
-          <caret line="86" column="7" selection-start-line="86" selection-start-column="7" selection-end-line="86" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/myremark.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/pojo/src/main/java/cn/young/manager/pojo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="321" column="26" selection-start-line="321" selection-start-column="26" selection-end-line="321" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/SchoolController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="134" column="40" lean-forward="true" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/schooldetail1.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="126" column="59" selection-start-line="126" selection-start-column="59" selection-end-line="126" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/addhouse.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5400">
-          <caret line="216" column="97" selection-start-line="216" selection-start-column="97" selection-end-line="216" selection-end-column="97" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/customer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="39" column="75" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/young-manager/dao/src/main/java/cn/young/mapper/CourseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="67" column="50" lean-forward="true" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
+          <caret line="225" column="90" lean-forward="true" selection-start-line="225" selection-start-column="20" selection-end-line="225" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/java/cn/young/manager/web/controller/RecommendController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="564">
+          <caret line="90" column="36" lean-forward="true" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#923#953#0" expanded="true" />
-            <element signature="e#1024#1054#0" expanded="true" />
-            <element signature="e#797#814#0" expanded="true" />
-            <element signature="e#1866#1882#0" expanded="true" />
-            <element signature="e#2796#2826#0" expanded="true" />
-            <element signature="e#2569#2586#0" expanded="true" />
-            <element signature="e#4516#4532#0" expanded="true" />
-            <element signature="e#5732#5759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/recommend.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/myremark.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/customer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/young-manager/web/src/main/webapp/WEB-INF/jsp/addhouse.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2500">
+          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

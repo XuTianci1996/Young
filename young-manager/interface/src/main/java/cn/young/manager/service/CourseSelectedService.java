@@ -2,10 +2,7 @@ package cn.young.manager.service;
 
 import cn.young.common.pojo.EasyUIDataGrid;
 import cn.young.common.pojo.YoungResult;
-import cn.young.manager.pojo.CourseSelected;
-import cn.young.manager.pojo.MyRemark;
-import cn.young.manager.pojo.PagingData;
-import cn.young.manager.pojo.UserRemark;
+import cn.young.manager.pojo.*;
 
 import java.util.List;
 
@@ -81,4 +78,9 @@ public interface CourseSelectedService {
      * @return
      */
     List<Integer> getAllMarkByCourse_code(String courseCode);
+
+
+    CourseSelected[] getInfo();
+
+    Course selectCourseName(Course course);
 }

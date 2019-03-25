@@ -20,6 +20,7 @@
         <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
             <li class="layui-nav-item" lay-unselect="" style="">
                 <a href="javascript:;">
+                    <img class="layui-nav-img" src="${loginUser.uimage}" />
                     <cite>${loginUser.uname}，欢迎回来</cite>
                     <span class="layui-nav-more"></span></a>
                 <dl class="layui-nav-child layui-anim layui-anim-upbit">
