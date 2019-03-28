@@ -37,7 +37,7 @@
                 <a href="javascript:;">用户信息管理</a>
                 <dl class="layui-nav-child">
                     <dd><a href="updatepwd" target="iframe">修改我的密码</a></dd>
-                    <dd><a href="addhouse" target="iframe">个人信息认证</a></dd>
+                    <dd><a href="addInfo" target="iframe">个人信息认证</a></dd>
                     <dd><a href="recommend" target="iframe">我的专属推荐</a></dd>
                 </dl>
             </li>
@@ -56,7 +56,7 @@
         <iframe src="welcome" width="100%" height="100%" frameborder="0" name="iframe" scrolling="auto" seamless></iframe>
     </div>
     <div class="layui-footer" style="text-align: center;font-size: 16px">
-        <p>Young项目组</p>
+        <p><span><a href="index">返回首页</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Young项目组</span> </p>
     </div>
 </div>
 <script src="layui/layui.js"></script>

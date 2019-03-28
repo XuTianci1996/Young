@@ -26,8 +26,8 @@
     }
 
     var toolbar = [{
-        text:'删除',
-        iconCls:'icon-cancel',
+        text:'评价列表',
+        iconCls:'icon',
         handler:function(){
             var ids = getSelectionsIds();
             if(ids.length == 0){

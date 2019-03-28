@@ -220,19 +220,34 @@
 
         <%--AJAX获取课程评价分页内容--%>
         <%--<div id="paging-comment"></div>--%>
+        <c:if test="${fn:length(UserRemarkList) == 0}">
+            <div class="layui-row" style="padding: 5px 20px;">
+                <div class="layui-col-md6">
+                    <i class="layui-icon layui-icon-dialogue" style="color: #CCCCCC; font-size: 80px; float: right"></i>
+                </div>
+                <div class="layui-col-md6">
+                    <div class="layui-col-md12" style="padding-top: 30px; font-size: 20px">
+                        &nbsp&nbsp<a style="color:#CCCCCC; ">赶紧选择课程，参与评价吧！</a>
+                    </div>
+                </div>
 
+            </div>
+        </c:if>
+
+        <c:if test="${fn:length(UserRemarkList) > 0}">
             <c:forEach items="${UserRemarkList}" var="Remark" varStatus="status">
                 <div class="comment">
                     <div class="imgdiv"><img class="imgcss" src="${Remark.uimage}"/></div>
-                    <div class="conmment_details">
+                    <div style="padding-left: 80px">
                         <span class="comment_name ">${Remark.uname} </span>
                         <span id="userrate${status.index}"></span>
                         <span><fmt:formatDate value="${Remark.content_date}" pattern="yyyy年MM月dd日"/></span>
-                        <div class="comment_content">  ${Remark.content}</div>
+                        <div class="comment_content">&nbsp;&nbsp;${Remark.content}</div>
                     </div>
                 </div>
                 <hr>
             </c:forEach>
+        </c:if>
 
         <div id="paging" style="text-align: center;"></div>
 
@@ -328,25 +343,28 @@
 
         //注册
         $('#registSubmit').click(function () {
-            if ($("input[name='uname']").val() != "" && $("input[id='registPassword']").val() != "" && $("input[name='telephone']").val() != "" && $("input[id='confirmPassword']").val() != "") {
-                if ($("input[id='registPassword']").val() != $("input[id='confirmPassword']").val()) {
+            if($("input[name='uname']").val()!=""&&$("input[id='registPassword']").val()!=""&&$("input[name='telephone']").val()!=""&&$("input[id='confirmPassword']").val()!=""){
+                if(!(/^1[34578]\d{9}$/.test($("input[name='telephone']").val()))){
+                    layer.msg("请输入正确的手机号！");
+                }
+                else if($("input[id='registPassword']").val()!=$("input[id='confirmPassword']").val()){
                     layer.msg("两次输入的密码不一致！");
-                    $("input[id='registPassword']").val() == "";
-                    $("input[id='confirmPassword']").val() == "";
+                    $("input[id='registPassword']").val()=="";
+                    $("input[id='confirmPassword']").val()=="";
 
-                } else {
-                    $.post("regist", $('.form').serialize(), function (res) {
+                }else{
+                    $.post("regist",$('.form').serialize(),function (res) {
                         console.log(res);
-                        if (res == 'OK') {
+                        if(res=='OK'){
                             layer.close(layer_index);
-                            layer.alert("注册成功!", {icon: 1, time: 2000});
+                            layer.alert("注册成功",{icon:1,time:2000});
                             $('.form')[0].reset();
-                        } else {
-                            layer.msg("注册失败!");
+                        }else{
+                            layer.msg("注册失败,用户名已存在");
                         }
                     })
                 }
-            } else {
+            }else{
                 layer.msg("请填写所有表单");
             }
         });

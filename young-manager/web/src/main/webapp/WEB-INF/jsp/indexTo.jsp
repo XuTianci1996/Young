@@ -23,7 +23,7 @@
             </div>
 
             <c:if test="${not empty loginUser }">
-                <div class="personalCenter layui-pull-right"><a class="operation" href="toUserSystem" target="_blank" style="color:#fff"><i class="layui-icon layui-icon-read"></i> 个人中心</a></div>
+                <div class="personalCenter layui-pull-right"><a class="personalCenter" href="toUserSystem" target="_blank" style="color:#fff"><i class="layui-icon layui-icon-read"></i> &nbsp;个人中心</a></div>
             </c:if>
             <c:if test="${empty loginUser }">
 
@@ -221,132 +221,39 @@
         </div>
     </div>
     <div class="course wCenter">
-        <div class="img"  style="width: 100%;text-align: center;"><img src="../img/tj-course.png" alt=""></div>
-        <div class="detail">
-            <ul>
-                <li>
-                    <a href="/course/detail/30008333">
-                        <div class="img">
-                            <img src="img/3.jpg" alt="">
-                        </div>
-                        <div class="status">
-                            <p><span>马克思主义基本原理概论</span><span class="icon"><i class="dimc2">省级精品</i></span></p>
-                            <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">2732</span></p>
-                        </div>
-                        <div class="person">
-                            <span><img src="/static/image/head.png" alt="">王来法</span>
-                            <span>浙江工商大学</span>
-                        </div>
-                    </a>
-                </li>
-                <li><a href="/course/detail/30008288">
-                    <div class="img">
-                        <img src="img/9.jpg" alt="">
-                    </div>
-                    <div class="status">
-                        <p><span>思想道德修养与法律基础</span><span class="icon"><i class="dimc3">立项课程</i></span></p>
-                        <p><span class="planing">正在开课</span><span><img src="/static/image/people@2x.png" alt="">2983</span></p>
-                    </div>
-                    <div class="person">
-                        <span><img src="http://image.moocollege.com/v2_customer/0uGjprijZ-DxLzpgB2BveyJKzvaf7Iuc3viE3XUwoNwMw5ItXcfcpE1diyBL8rik_1504748014916@!small" alt="">翁攀峰</span>
-                        <span>温州医科大学</span>
-                    </div>
-                </a>
-                </li>
-                <li>
-                    <a href="/course/detail/30007327">
-                        <div class="img">
-                            <img src="img/1.png" alt="">
-                        </div>
-                        <div class="status">
-                            <p><span>电路分析基础（2019春学期）</span><span class="icon"><i class="dimc1">国家精品</i></span></p>
-                            <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">2368</span></p>
-                        </div>
-                        <div class="person">
-                            <span><img src="/static/image/head.png" alt="">卢飒</span>
-                            <span>中国计量大学现代科技学院</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/course/detail/30007776">
-                        <div class="img">
-                            <img src="img/4.jpg" alt="">
-                        </div>
-                        <div class="status">
-                            <p><span>病理生理学(2018-2019学年下)</span><span class="icon"><i class="dimc3">立项课程</i></span></p>
-                            <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">1959</span></p>
-                        </div>
-                        <div class="person">
-                            <span><img src="http://image.moocollege.com/v2_customer/4idB3NBDFu0jSZW1G5AppEp4IAwUbPHfAnKBy6ylGTjCa29QaeZSckLPn4NWawlV_1502179242430@!small" alt="">许益笑</span>
-                            <span>温州医科大学仁济学院</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/course/detail/30007397">
-                        <div class="img">
-                            <img src="img/7.jpg" alt="">
-                        </div>
-                        <div class="status">
-                            <p><span>经济数学</span><span class="icon"><i class="dimc2">省级精品</i></span></p>
-                            <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">1058</span></p>
-                        </div>
-                        <div class="person">
-                            <span><img src="/static/image/head.png" alt="">陈笑缘</span>
-                            <span>浙江商业职业技术学院</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/course/detail/30007600">
-                        <div class="img">
-                            <img src="img/7.jpg" alt="">
-                        </div>
-                        <div class="status">
-                            <p><span>应用高等数学</span><span class="icon"><i class="dimc3">立项课程</i></span></p>
-                            <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">1435</span></p>
-                        </div>
-                        <div class="person">
-                            <span><img src="/static/image/head.png" alt="">胡桐春</span>
-                            <span>杭州科技职业技术学院</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/course/detail/30008058">
-                        <div class="img">
-                            <img src="img/8.jpg" alt="">
-                        </div>
-                        <div class="status">
-                            <p><span>江南古镇与水乡文化</span><span class="icon"><i class="dimc3">立项课程</i></span></p>
-                            <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">1248</span></p>
-                        </div>
-                        <div class="person">
-                            <span><img src="http://image.moocollege.com/v2_customer/XK9HStabaw5VpkGP9zxJaNyNHPwbzYKuWyspuiCb4M0J1ZEc6EQ0qtra9b845Y2m_1502432178802@!small" alt="">陈勰</span>
-                            <span>温州医科大学仁济学院</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/course/detail/30007330">
-                        <div class="img">
-                            <img src="img/14.jpg" alt="">
-                        </div>
-                        <div class="status">
-                            <p><span>大学生创业导航</span><span class="icon"><i class="dimc3">立项课程</i></span></p>
-                            <p><span class="planing" >正在开课</span><span><img src="/static/image/people@2x.png" alt="">8140</span></p>
-                        </div>
-                        <div class="person">
-                            <span><img src="/static/image/head.png" alt="">吴芳珍</span>
-                            <span>金华职业技术学院</span>
-                        </div>
-                    </a>
-                </li>
+
+        <fieldset class="layui-elem-field layui-bg-gray">
+            <legend>
+
+                <p  style="font-size: 25px;">推荐课程</p>
+            </legend>
+            <div class="layui-field-box">
+
+                <div class="detail">
+                    <ul>
+                        <c:forEach items="${RecommendCourse}" var="c">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/coursedetails?cid=${c.cid}">
+                                    <div class="img">
+                                        <img src="${c.courseImage}" alt="">
+                                    </div>
+                                    <div class="status">
+                                        <p><span>${c.courseName}</span></p>
+                                        <p><span class="planing">正在开课</span><span>${c.courseSelectnum}</span></p>
+                                    </div>
+                                    <div class="person">
+                                        <span><img src="" alt=""></span>
+                                        <span>${c.schName}</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </c:forEach>
+                    </ul>
+                </div>
+            </div>
+        </fieldset>
 
 
-            </ul>
-        </div>
     </div>
 
 

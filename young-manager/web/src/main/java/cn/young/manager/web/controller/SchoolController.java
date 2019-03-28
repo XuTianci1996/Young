@@ -20,6 +20,13 @@ public class SchoolController {
     @Autowired
     CourseService courseService;
 
+    /**
+     * 学校页面
+     * @param request
+     * @param page
+     * @param limit
+     * @return
+     */
     @RequestMapping("/schooldetail1")
     public String findCourseBySname(HttpServletRequest request,int page,int limit){
 
@@ -35,17 +42,21 @@ public class SchoolController {
 
         //选出学校名为schname的course数据
         List<Course> list = courseService.findCourseBySid(p);
-
         //返回school和course数据
         request.setAttribute("schoolname",school);
         request.setAttribute("courses",list);
         request.setAttribute("page",page);
-
-
         return "schooldetail1";
 
     }
 
+    /**
+     * 学校页面
+     * @param request
+     * @param page
+     * @param limit
+     * @return
+     */
     @RequestMapping("/schooldetail2")
     public String findCourseBySname2(HttpServletRequest request,int page,int limit){
 

@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>验证信息</title>
     <link rel="stylesheet" href="layui/css/layui.css">
+    <script type="text/javascript" src="js/layui.all.js"></script>
 </head>
 <body>
 <div class="wrapper" style="width: 900px;margin-top: 40px">
@@ -16,23 +17,23 @@
         <div class="layui-form-item">
             <label class="layui-form-label">学校</label>
             <div class="layui-input-block">
-                <input type="hidden" name="id" value="${loginUser.uid }">
+                <input type="hidden" name="id" value="${userInfo.uid }">
                 <!-- <textarea name="houseDesc" placeholder="请输入内容" class="layui-textarea" required lay-verify="required" ></textarea>-->
-                <input type="text" name="school" required lay-verify="required" value="${loginUser.school }" placeholder="" autocomplete="off"
+                <input type="text" name="school" required lay-verify="required" value="${userInfo.school }" placeholder="" autocomplete="off"
                 class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">姓名</label>
             <div class="layui-input-block">
-                <input type="text" value="${loginUser.stuName}" name="stu_name" required lay-verify="required" placeholder=""
+                <input type="text" value="${userInfo.stuName}" name="stu_name" required lay-verify="required" placeholder=""
                        autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">学号</label>
             <div class="layui-input-block">
-                <input type="text" name="stu_number" value="${loginUser.stuNumber}" required lay-verify="required" placeholder=""
+                <input type="text" name="stu_number" value="${userInfo.stuNumber}" required lay-verify="required" placeholder=""
                        autocomplete="off" class="layui-input">
             </div>
         </div>
@@ -47,7 +48,7 @@
             <label class="layui-form-label">性别</label>
             <div class="layui-input-block">
                 <select name="sex"  lay-verify="required">
-                    <option value="${loginUser.sex}"></option>
+                    <option value="${userInfo.sex}"></option>
                     <option  value="0" selected>保密</option>
                     <option value="1">女</option>
                     <option value="2">男</option>
@@ -57,7 +58,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">邮箱</label>
             <div class="layui-input-block">
-                <input type="text" name="email" value="${loginUser.email}" required lay-verify="required" placeholder=""
+                <input type="text" name="email" value="${userInfo.email}" required lay-verify="email" placeholder=""
                 autocomplete="off" class="layui-input">
             </div>
         </div>
@@ -65,7 +66,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">联系电话</label>
             <div class="layui-input-block">
-                <input type="text" name="telephone" value="${loginUser.telephone}" required lay-verify="required|phone" placeholder=""
+                <input type="text" name="telephone" value="${userInfo.telephone}" required lay-verify="required|phone" placeholder=""
                 autocomplete="off" class="layui-input">
             </div>
         </div>
@@ -101,6 +102,8 @@
                 }
             }
         });
+
+
 
         var demoListView = $('#detailsList')
             ,uploadListIns = upload.render({
@@ -160,8 +163,8 @@
         form.on("submit(addHouseRecord)",function(data){
             $.post("addHouseRecord",$("#addHouseForm").serialize(),function(res){
                 if(res=="OK"){
-                    layer.msg("验证个人信息信息成功！",{icon:1,end:function(){window.location.href="addHouse";}});
-                    $("#addHouseForm")[0].reset();
+                    layer.msg("验证个人信息信息成功！",{icon:1,end:function(){window.location.href="addInfo";}});
+                   // $("#addHouseForm")[0].reset();
                 }
             })
             return false;

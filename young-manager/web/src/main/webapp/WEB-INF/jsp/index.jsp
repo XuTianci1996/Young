@@ -122,8 +122,8 @@
                                                 </div>--%>
                     </form>
                     <div class="layui-form-item">
-                        <input type="submit" id="registSubmit" class="layui-btn layui-btn-fluid layui-btn-radius layui-btn-normal regist-btn" value="立即注册" />
-                    </div>
+                    <input type="submit" id="registSubmit" class="layui-btn layui-btn-fluid layui-btn-radius layui-btn-normal regist-btn" value="立即注册" />
+                </div>
                 </div>
             </div>
         </div>
@@ -246,9 +246,9 @@
                 </div>
                 <div class="center">
                     <dl>
-                        <dt><a class="black_color" href="Index/notice.htm">-平台介绍</a></dt>
-                        <dt><a class="black_color" href="Index/help.htm">-帮助中心</a></dt>
-                        <dt><a class="black_color" href="Index/concat.htm">-联系我们</a></dt>
+                        <dt><a class="black_color" href="#">-平台介绍</a></dt>
+                        <dt><a class="black_color" href="#">-帮助中心</a></dt>
+                        <dt><a class="black_color" href="#">-联系我们</a></dt>
                         <!-- <dt><a class="black_color" href="http://">-关注我们</a></dt> -->
                     </dl>
                 </div>
@@ -291,12 +291,14 @@
 
                 $('#registSubmit').click(function () {
                     if($("input[name='uname']").val()!=""&&$("input[id='registPassword']").val()!=""&&$("input[name='telephone']").val()!=""&&$("input[id='confirmPassword']").val()!=""){
-                        if($("input[id='registPassword']").val()!=$("input[id='confirmPassword']").val()){
+                        if(!(/^1[34578]\d{9}$/.test($("input[name='telephone']").val()))){
+                            layer.msg("请输入正确的手机号！");
+                        }
+                        else if($("input[id='registPassword']").val()!=$("input[id='confirmPassword']").val()){
                             layer.msg("两次输入的密码不一致！");
                             $("input[id='registPassword']").val()=="";
-                            $("input[id='confirmPassword']").val()=="";
-
-                        }else{
+                            $("input[id='confirmPassword']").val()=="";}
+                        else{
                             $.post("regist",$('.form').serialize(),function (res) {
                                 console.log(res);
                                 if(res=='OK'){

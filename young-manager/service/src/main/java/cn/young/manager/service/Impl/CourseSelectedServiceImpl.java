@@ -78,14 +78,11 @@ public class CourseSelectedServiceImpl implements CourseSelectedService {
             System.out.println(remark.getContentDate());
             myRemarkList.add(myRemark);
         }
-
         int total = courseSelectedMapper.getSelectedCountByUid(uid);
-
         myRemarkPagingData.setCode(0);
         myRemarkPagingData.setMsg("200");
         myRemarkPagingData.setCount(total);
         myRemarkPagingData.setData(myRemarkList);
-
         return myRemarkPagingData;
     }
 
@@ -113,7 +110,8 @@ public class CourseSelectedServiceImpl implements CourseSelectedService {
     @Override
     public int updateRemark(int cid, int uid, String content, int mark) {
         Date content_date = new Date();
-        return courseSelectedMapper.updateRemarkByCidAndUid(cid, uid, content, mark, content_date);
+        String result = BadWordUtil2.replaceBadWord(content, 1, "*");
+        return courseSelectedMapper.updateRemarkByCidAndUid(cid, uid, result, mark, content_date);
     }
 
     /**
@@ -214,7 +212,7 @@ public class CourseSelectedServiceImpl implements CourseSelectedService {
         CourseSelectedExample courseExample = new CourseSelectedExample();
         List<CourseSelected> courseList = courseSelectedMapper.selectByExampleWithBLOBs(courseExample);
         CourseSelected[] courseSelected = new CourseSelected[courseList.size()];
-        System.out.println(courseList.size());
+        //System.out.println(courseList.size());
         CourseSelected[] arr = courseList.toArray(courseSelected);
         for (CourseSelected cd :arr){
             System.out.println(cd.getUid());

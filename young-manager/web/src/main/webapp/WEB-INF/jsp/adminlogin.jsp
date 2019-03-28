@@ -23,7 +23,7 @@
         <div class="line"><span>账号:</span>
             <input class="bt_input" style="width: 250px" type="text" id="adminname"  data-options="required:true" /></div>
         <div class="line"><span>密码:</span>
-            <input class="bt_input" style="width: 250px" type="text" id="adminpsw" type="password"/></div>
+            <input class="bt_input" style="width: 250px" type="password" id="adminpsw" type="password"/></div>
         <button id="login" style="width: 260px; margin-left: 40px"  type="submit" class="logingBut">登录</button>
     </div>
     <%--<div class="easyui-dialog" title="管理员登录" data-options="closable:false,draggable:false" style="width:400px;height:300px;padding:10px;">--%>
@@ -48,10 +48,12 @@
         $("#login").click(function(){
             var username = $("#adminname").val();
             var password = $("#adminpsw").val();
-            $.get("/check/"+username+"/"+password,function (data) {
+            $.post("/check/"+username+"/"+password,function (data) {
                 if(data.status == 200){
                     window.location.href="admin";
                 }else if(data.status == 404){
+                    alert("输入的密码或用户名有错！");
+                    //layer.msg("请填写所有表单");
                     window.location.href="adminlogin";
                 }
             });

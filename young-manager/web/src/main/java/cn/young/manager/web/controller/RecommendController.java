@@ -4,7 +4,6 @@ import cn.young.manager.pojo.Course;
 import cn.young.manager.pojo.CourseSelected;
 import cn.young.manager.pojo.User;
 import cn.young.manager.service.CourseSelectedService;
-import cn.young.manager.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +22,11 @@ public class RecommendController {
 
     private Long uid;
 
-
+    /**
+     * 个人推荐
+     * @param request
+     * @return
+     */
     @RequestMapping("/recommend")
     public ModelAndView recommend(HttpServletRequest request){
         HttpSession session = request.getSession();
@@ -31,10 +34,10 @@ public class RecommendController {
         this.uid=user.getUid();
         CourseSelected[] CS=courseSelected.getInfo();
 
-        for(int i=0;i<CS.length;i++){
-            System.out.println(CS[i].getCourseCode()+","+CS[i].getUid()+","+CS[i].getMark());
-        }
-        System.out.println();
+//        for(int i=0;i<CS.length;i++){
+//            System.out.println(CS[i].getCourseCode()+","+CS[i].getUid()+","+CS[i].getMark());
+//        }
+       // System.out.println();
         Map<Integer, Map<String, Integer>> userPerfMap = new HashMap<Integer, Map<String, Integer>>();
         Map<Integer, Map<String, Integer>> currentUser = new HashMap<Integer, Map<String, Integer>>();
 
@@ -51,7 +54,7 @@ public class RecommendController {
                     continue;
                 }
                 persons[i].put(CS[j].getCourseCode(),CS[j].getMark());
-                System.out.println(CS[j].getUid()+"===="+CS[j-1].getUid()+"   "+i+"=="+j);
+                //System.out.println(CS[j].getUid()+"===="+CS[j-1].getUid()+"   "+i+"=="+j);
                 if(!((CS[j].getUid()).equals(CS[j-1].getUid()))){
                     Map<String, Integer> a =userPerfMap.put(CS[j].getUid().intValue(),persons[i]);
                     count=j;
@@ -59,14 +62,14 @@ public class RecommendController {
             }
         }
         Map<Integer, Double> simUserSimMap = new HashMap<Integer, Double>();
-        System.out.println("皮尔逊相关系数:"+uid);
+        //System.out.println("皮尔逊相关系数:"+uid);
 
         for(Entry<Integer, Map<String,Integer>> userperEn:userPerfMap.entrySet()){
             Integer userid=userperEn.getKey();
-            System.out.println(userid+userperEn.getValue().size());
+            //System.out.println(userid+userperEn.getValue().size());
             if(!uid.equals(userid)){
                 double sim = getUserSimilar(userperEn.getValue(), userperEn.getValue());
-                System.out.println(uid+"与" + userid + "之间的相关系数:" + sim);
+              //  System.out.println(uid+"与" + userid + "之间的相关系数:" + sim);
                 simUserSimMap.put(userid, sim);
             }
         }
@@ -77,16 +80,29 @@ public class RecommendController {
             simUserObjMap.put(p.getKey(), p.getValue());
         }
 
-        System.out.println("推荐结果:" + getRecommend(simUserObjMap, simUserSimMap));
+        //System.out.println("推荐结果:" + getRecommend(simUserObjMap, simUserSimMap));
         ModelAndView mv=new ModelAndView();
         Course c=new Course();
         Course d=new Course();
+        Course e=new Course();
+        Course f=new Course();
         c.setCourseCode(getRecommend(simUserObjMap, simUserSimMap)[0]);
         d.setCourseCode(getRecommend(simUserObjMap, simUserSimMap)[1]);
-        Course courseName1=courseSelected.selectCourseName(c);
-        Course courseName2=courseSelected.selectCourseName(d);
-        mv.addObject("personnal",courseName1.getCourseName());
-        mv.addObject("personna2",courseName2.getCourseName());
+        e.setCourseCode(getRecommend(simUserObjMap, simUserSimMap)[2]);
+        f.setCourseCode(getRecommend(simUserObjMap, simUserSimMap)[3]);
+
+        try{
+        Course course1=courseSelected.selectCourseName(c);
+        Course course2=courseSelected.selectCourseName(d);
+        Course course3=courseSelected.selectCourseName(e);
+        Course course4=courseSelected.selectCourseName(f);
+        mv.addObject("personnal",course1);
+        mv.addObject("personna2",course2);
+        mv.addObject("personna3",course3);
+        mv.addObject("personna4",course4);
+        }catch (Exception error){
+
+        }
         //mv.addObject("personnal",getRecommend(simUserObjMap, simUserSimMap));
         mv.setViewName("recommend");
         return mv;
@@ -120,7 +136,7 @@ public class RecommendController {
 
     //获取推荐结果
     public String[] getRecommend(Map<Integer, Map<String, Integer>> simUserObjMap,
-                                      Map<Integer, Double> simUserSimMap) {
+                                 Map<Integer, Double> simUserSimMap) {
         Map<String, Double> objScoreMap = new HashMap<String, Double>();
         for (Entry<Integer, Map<String, Integer>> simUserEn : simUserObjMap.entrySet()) {
             int user = simUserEn.getKey();
@@ -149,12 +165,14 @@ public class RecommendController {
                 }
             }
         });
-        for (Map.Entry<String, Double> entry : enList) {
-            System.out.println(entry.getKey()+"的加权推荐值:"+entry.getValue());
-        }
-        String[]result=new String[2];
+//        for (Map.Entry<String, Double> entry : enList) {
+//            System.out.println(entry.getKey()+"的加权推荐值:"+entry.getValue());
+//        }
+        String[]result=new String[4];
         result[0]=enList.get(enList.size() - 1).getKey();
         result[1]=enList.get(enList.size() - 2).getKey();
+        result[2]=enList.get(enList.size() - 3).getKey();
+        result[3]=enList.get(enList.size() - 4).getKey();
         return result;
         //return enList.get(enList.size() - 1).getKey();//返回推荐结果
     }

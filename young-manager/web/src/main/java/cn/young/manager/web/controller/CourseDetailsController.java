@@ -32,6 +32,13 @@ public class CourseDetailsController {
 
     //多了一个参数course_code，用于查询课程详情页的大部分信息
     //测试地址：http://localhost:8080/course/coursedetails?cid=1&course_code=AC15201
+
+    /**
+     * 用于查询课程详情页的大部分信息
+     * @param cid
+     * @param request
+     * @return
+     */
     @RequestMapping("/coursedetails")
     public ModelAndView courseDetails(int cid, HttpServletRequest request) {
         ModelAndView mav = new ModelAndView("coursedetails");
@@ -47,11 +54,10 @@ public class CourseDetailsController {
         //3.2 根据上一步获得的uid，获取user表中的uname和uimage
         for (CourseSelected ele : courseSelectedList) {
             UserRemark userRemark = new UserRemark();
-            System.out.println(ele.getContentDate());
+            //System.out.println(ele.getContentDate());
             userRemark.setContent(ele.getContent());
             userRemark.setContent_date(ele.getContentDate());
             userRemark.setMark(ele.getMark());
-
             Long uidLong = ele.getUid();
             int uid = new Long(uidLong).intValue();
             User user = userService.getUnameAndUimage(uid);
@@ -62,7 +68,6 @@ public class CourseDetailsController {
                 userRemarkList.add(userRemark);
             }
         }
-
         //4 向mav中存入这些对象
         mav.addObject("Course", course);
         mav.addObject("Evaluation", evaluation);
@@ -72,6 +77,14 @@ public class CourseDetailsController {
 
 
     //选择课程，传入cid和uid和course_code，返回选课是否成功的信息
+
+    /**
+     * 选择课程
+     * @param cid
+     * @param uid
+     * @param course_code
+     * @return
+     */
     @RequestMapping("/chooseCourse")
     @ResponseBody
     public String chooseCourse(int cid, int uid, String course_code){
@@ -84,6 +97,13 @@ public class CourseDetailsController {
     }
 
     //退出课程，传入cid和uid，返回退课是否成功的信息
+
+    /**
+     * 退出课程
+     * @param cid
+     * @param uid
+     * @return
+     */
     @RequestMapping("/quitCourse")
     @ResponseBody
     public String quitCourse(int cid, int uid){
@@ -92,24 +112,26 @@ public class CourseDetailsController {
         //对course_selected表进行的操作：直接更改
         //对course表的操作：course_selectnum减1
         String quitCourse = courseSelectedService.quitCourse(cid, uid);
-
         return quitCourse;
     }
 
-    //用户一旦登录，且跳到了课程详情页，就要判断当前用户选了这门课没，1选了，0没选
+    /**
+     * 判断是否选课
+     * @param cid
+     * @param uid
+     * @return
+     */
     @RequestMapping("/hasChoosed")
     @ResponseBody
     public String hasChoosed(int cid, int uid){
+    //用户一旦登录，且跳到了课程详情页，就要判断当前用户选了这门课没，1选了，0没选
         int ischoose = courseSelectedService.hasChoosed(cid, uid);
-
         if(ischoose == 1){
             return "1";
         }else if(ischoose == 0){
             return "0";
         }
-
         //还有没找到该行数据的情况！！！
-
         return "0";
     }
 

@@ -27,7 +27,7 @@ public class CourseImpl implements CourseService {
     private CourseSelectedMapper courseSelectedMapper;
 
     /**
-     *
+     *根据id查询课程
      * @param id
      * @return
      */
@@ -88,6 +88,7 @@ public class CourseImpl implements CourseService {
      */
     @Override
     public Course getCourseByCid(int cid) {
+
         return courseMapper.selectByPrimaryKey((long) cid);
     }
 

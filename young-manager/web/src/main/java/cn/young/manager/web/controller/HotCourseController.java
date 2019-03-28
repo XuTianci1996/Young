@@ -1,7 +1,7 @@
 package cn.young.manager.web.controller;
 
 import cn.young.manager.pojo.Course;
-import cn.young.manager.pojo.HotCourse;
+import cn.young.manager.pojo.User;
 import cn.young.manager.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -33,6 +34,9 @@ public class HotCourseController {
 
         return "index";
     }
+
+
+
     /**
      * 对应页面的跳转
      * @param page

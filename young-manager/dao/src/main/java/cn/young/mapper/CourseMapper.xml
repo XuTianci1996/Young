@@ -371,7 +371,12 @@
 
 
   <select id="selectCourseName" resultMap="BaseResultMap" parameterType="cn.young.manager.pojo.Course">
-        select course_name from course WHERE course_code=#{courseCode}
+        select
+        <include refid="Base_Column_List" />
+        from
+        course
+        WHERE
+        course_code=#{courseCode} limit 1
     </select>
 
 </mapper>

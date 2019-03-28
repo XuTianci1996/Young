@@ -17,10 +17,14 @@ public class CourseController {
     @Autowired
     private CourseService service;
 
-
+    /**
+     * 课程查询
+     * @param request
+     * @param keywords
+     * @return
+     */
     @RequestMapping("/findCourseByLike")
     public String findHouseByLike(HttpServletRequest request, String keywords) {
-
         Boolean flag = null;
         if (keywords!=null){
             flag=true;
@@ -31,14 +35,18 @@ public class CourseController {
         request.getSession().removeAttribute("ha");
         request.getSession().setAttribute("Course", findCourse);
         request.getSession().setAttribute("flag", flag);
-
-        System.out.println(keywords);
-
+        //System.out.println(keywords);
         return "indexTo";
     }
 
 
-
+    /**
+     * 课程分页
+     * @param page
+     * @param limit
+     * @param request
+     * @return
+     */
     @RequestMapping("/myCourseInfo")
     @ResponseBody
     public PagingData<Course> getMyCourseByUid(int page, int limit, HttpServletRequest request) {

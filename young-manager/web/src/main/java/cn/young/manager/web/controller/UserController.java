@@ -63,7 +63,11 @@ public class UserController {
         return "FAIL";
     }
 
-
+    /**
+     *
+     * @param request
+     * @return
+     */
     @RequestMapping("/toUserSystem")
     public String toUserSystemPage(HttpServletRequest request) {
         HttpSession session = request.getSession();
@@ -80,12 +84,23 @@ public class UserController {
 //        return "myrental";
 //    }
 
+    /**
+     * 个人中心的session
+     * @return
+     */
     @RequestMapping("/welcome")
     public String toWelcomePage() {
         return "welcome";
     }
 
 
+    /**
+     * 修改密码
+     * @param id
+     * @param newPwd
+     * @param oldPwd
+     * @return
+     */
     @RequestMapping("/updateUserPwd")
     @ResponseBody
     public String updateUserPwd(String id,String newPwd,String oldPwd) {
@@ -107,6 +122,11 @@ public class UserController {
         return "FAIL";
     }
 
+    /**
+     * 查看我的选课
+     * @param request
+     * @return
+     */
     @RequestMapping("/myorder")
     public String myCourseInfo(HttpServletRequest request){
         HttpSession session = request.getSession();
@@ -119,6 +139,26 @@ public class UserController {
 
     }
 
+    @RequestMapping("/addInfo")
+    public String addHouse(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("loginUser");
+        User userInfo = userService.getUserById(user.getUid());
+        request.setAttribute("userInfo", userInfo);
+        return "addInfo";
+    }
+
+    /**
+     * 修改信息
+     * @param id
+     * @param school
+     * @param stu_number
+     * @param stu_name
+     * @param telephone
+     * @param email
+     * @param sex
+     * @return
+     */
     @RequestMapping("/addHouseRecord")
     @ResponseBody
     public String validationInfo(String id,String school,int stu_number,String stu_name,String telephone,String email,int sex) {

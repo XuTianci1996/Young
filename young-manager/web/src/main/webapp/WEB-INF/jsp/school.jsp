@@ -119,9 +119,9 @@
 
                     <div class="center">
                         <dl>
-                            <dt><a class="black_color" href="Index/notice.htm">-平台介绍</a></dt>
-                            <dt><a class="black_color" href="Index/help.htm">-帮助中心</a></dt>
-                            <dt><a class="black_color" href="Index/concat.htm">-联系我们</a></dt>
+                            <dt><a class="black_color" href="#">-平台介绍</a></dt>
+                            <dt><a class="black_color" href="#">-帮助中心</a></dt>
+                            <dt><a class="black_color" href="#">-联系我们</a></dt>
                             <!-- <dt><a class="black_color" href="http://">-关注我们</a></dt> -->
                         </dl>
                     </div>

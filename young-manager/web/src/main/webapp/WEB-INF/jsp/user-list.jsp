@@ -3,7 +3,6 @@
        data-options="singleSelect:true,collapsible:true,pagination:true,url:'/user/list',method:'get',pageSize:30,toolbar:toolbar">
     <thead>
     <tr>
-        <th data-options="field:'ck',checkbox:true"></th>
         <th data-options="field:'uid',width:60">用户ID</th>
         <th data-options="field:'uname',width:100">用户名</th>
         <th data-options="field:'school',width:100">认证学校</th>
@@ -30,8 +29,8 @@
     }
 
     var toolbar = [{
-        text:'',
-        iconCls:'icon-cancel',
+        text:'用户列表',
+        iconCls:'icon',
         handler:function(){
             var ids = getSelectionsIds();
             if(ids.length == 0){
